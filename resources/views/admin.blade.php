@@ -343,21 +343,6 @@ Website: http://www.webthemez.com/
             <!-- /. ROW  -->
 
 
-
-
-
-
-
-
-
-
-            <!-- /. ROW  -->
-
-
-
-
-
-
 <!-- /. WRAPPER  -->
 <!-- JS Scripts-->
 <!-- jQuery Js -->
@@ -383,7 +368,7 @@ Website: http://www.webthemez.com/
 
 <!-- Chart Js -->
 <script type="text/javascript" src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/custom-scripts.js"></script>
-<script type="text/javascript" src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/chartjs.js"></script>
+<script type="text/javascript" src=""></script>
 
 </body>
 
