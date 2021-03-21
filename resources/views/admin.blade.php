@@ -1,374 +1,452 @@
 
 <!DOCTYPE html>
-<!--
-Template Name: BRILLIANT Bootstrap Admin Template
-Version: 4.5.6
-Author: WebThemez
-Website: http://www.webthemez.com/
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="" name="description" />
-    <meta content="webthemez" name="author" />
-    <title>BRILLIANT Free Bootstrap Admin Template - WebThemez</title>
-    <!-- Bootstrap Styles-->
-    <link href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FontAwesome Styles-->
-    <link href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- Morris Chart Styles-->
-    <link href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <!-- Custom Styles-->
-    <link href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/css/custom-styles.css" rel="stylesheet" />
-    <!-- Google Fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/Lightweight-Chart/cssCharts.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Focus - Bootstrap Admin Dashboard </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="stylesheet" href="https://demo.themefisher.com/focus/vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://demo.themefisher.com/focus/vendor/owl-carousel/css/owl.theme.default.min.css">
+    <link href="https://demo.themefisher.com/focus/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+    <link href="https://demo.themefisher.com/focus/css/style.css" rel="stylesheet">
+
+
+
 </head>
 
 <body>
-<div id="wrapper">
-    <nav class="navbar navbar-default top-navbar" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><strong><i class="icon fa fa-plane"></i> BRILLIANT</strong></a>
 
-            <div id="sideNav" href="">
-                <i class="fa fa-bars icon"></i>
+<!--*******************
+    Preloader start
+********************-->
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<!--*******************
+    Preloader end
+********************-->
+
+
+<!--**********************************
+    Main wrapper start
+***********************************-->
+<div id="main-wrapper">
+
+    <!--**********************************
+        Nav header start
+    ***********************************-->
+    <div class="nav-header">
+        <a href="index.html" class="brand-logo">
+            <img class="logo-abbr" src="./images/logo.png" alt="">
+            <img class="logo-compact" src="./images/logo-text.png" alt="">
+            <img class="brand-title" src="./images/logo-text.png" alt="">
+        </a>
+
+        <div class="nav-control">
+            <div class="hamburger">
+                <span class="line"></span><span class="line"></span><span class="line"></span>
             </div>
         </div>
+    </div>
+    <!--**********************************
+        Nav header end
+    ***********************************-->
 
-        <ul class="nav navbar-top-links navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                    <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-messages">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Doe</strong>
-                                <span class="pull-right text-muted">
-                                        <em>Today</em>
-                                    </span>
+    <!--**********************************
+        Header start
+    ***********************************-->
+    <div class="header">
+        <div class="header-content">
+            <nav class="navbar navbar-expand">
+                <div class="collapse navbar-collapse justify-content-between">
+                    <div class="header-left">
+                        <div class="search_bar dropdown">
+                                <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
+                                    <i class="mdi mdi-magnify"></i>
+                                </span>
+                            <div class="dropdown-menu p-0 m-0">
+                                <form>
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                </form>
                             </div>
-                            <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                            </div>
-                            <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                            </div>
-                            <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>Read All Messages</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-messages -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                    <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-tasks">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 1</strong>
-                                    <span class="pull-right text-muted">60% Complete</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                        <span class="sr-only">60% Complete (success)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 2</strong>
-                                    <span class="pull-right text-muted">28% Complete</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
-                                        <span class="sr-only">28% Complete</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 3</strong>
-                                    <span class="pull-right text-muted">60% Complete</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                        <span class="sr-only">60% Complete (warning)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 4</strong>
-                                    <span class="pull-right text-muted">85% Complete</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                                        <span class="sr-only">85% Complete (danger)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>See All Tasks</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-tasks -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                    <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-alerts">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-comment fa-fw"></i> New Comment
-                                <span class="pull-right text-muted small">4 min</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                <span class="pull-right text-muted small">12 min</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                <span class="pull-right text-muted small">4 min</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-tasks fa-fw"></i> New Task
-                                <span class="pull-right text-muted small">4 min</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                <span class="pull-right text-muted small">4 min</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>See All Alerts</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-alerts -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-user -->
-            </li>
-            <!-- /.dropdown -->
-        </ul>
-    </nav>
-    <!--/. NAV TOP  -->
-    <nav class="navbar-default navbar-side" role="navigation">
-        <div class="sidebar-collapse">
-            <ul class="nav" id="main-menu">
+                        </div>
+                    </div>
 
-                <li>
-                    <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
-                </li>
-                <li>
-                    <a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
-                </li>
-
-                <li>
-                    <a href="#"><i class="fa fa-sitemap"></i> Charts<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="chart.html">Charts JS</a>
+                    <ul class="navbar-nav header-right">
+                        <li class="nav-item dropdown notification_dropdown">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                <i class="mdi mdi-bell"></i>
+                                <div class="pulse-css"></div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <ul class="list-unstyled">
+                                    <li class="media dropdown-item">
+                                        <span class="success"><i class="ti-user"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong>Martin</strong> has added a <strong>customer</strong> Successfully
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                    <li class="media dropdown-item">
+                                        <span class="primary"><i class="ti-shopping-cart"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong>Jennifer</strong> purchased Light Dashboard 2.0.</p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                    <li class="media dropdown-item">
+                                        <span class="danger"><i class="ti-bookmark"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong>Robin</strong> marked a <strong>ticket</strong> as unsolved.
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                    <li class="media dropdown-item">
+                                        <span class="primary"><i class="ti-heart"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong>David</strong> purchased Light Dashboard 1.0.</p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                    <li class="media dropdown-item">
+                                        <span class="success"><i class="ti-image"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong> James.</strong> has added a<strong>customer</strong> Successfully
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                </ul>
+                                <a class="all-notification" href="#">See all notifications <i
+                                        class="ti-arrow-right"></i></a>
+                            </div>
                         </li>
-                        <li>
-                            <a href="morris-chart.html">Morris Chart</a>
+                        <li class="nav-item dropdown header-profile">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                <i class="mdi mdi-account"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="./app-profile.html" class="dropdown-item">
+                                    <i class="icon-user"></i>
+                                    <span class="ml-2">Profile </span>
+                                </a>
+                                <a href="./email-inbox.html" class="dropdown-item">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="ml-2">Inbox </span>
+                                </a>
+                                <a href="./page-login.html" class="dropdown-item">
+                                    <i class="icon-key"></i>
+                                    <span class="ml-2">Logout </span>
+                                </a>
+                            </div>
                         </li>
                     </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--**********************************
+        Header end ti-comment-alt
+    ***********************************-->
+
+    <!--**********************************
+        Sidebar start
+    ***********************************-->
+    <div class="quixnav">
+        <div class="quixnav-scroll">
+            <ul class="metismenu" id="menu">
+                <li class="nav-label first">Main Menu</li>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                            class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
+                    <ul aria-expanded="false">
+                        <li><a href="./index.html">Dashboard 1</a></li>
+                        <li><a href="./index2.html">Dashboard 2</a></li>
+                    </ul>
                 </li>
-
-                <li>
-                    <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
-                </li>
-
-                <li>
-                    <a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
-                </li>
-                <li>
-                    <a href="form.html"><i class="fa fa-edit"></i> Forms </a>
-                </li>
-
-
-                <li>
-                    <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Second Level Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Second Level Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#">Third Level Link</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Link</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Link</a>
-                                </li>
-
+                <li class="nav-label">Apps</li>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                            class="icon icon-app-store"></i><span class="nav-text">Apps</span></a>
+                    <ul aria-expanded="false">
+                        <li><a href="./app-profile.html">Profile</a></li>
+                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
+                            <ul aria-expanded="false">
+                                <li><a href="./email-compose.html">Compose</a></li>
+                                <li><a href="./email-inbox.html">Inbox</a></li>
+                                <li><a href="./email-read.html">Read</a></li>
                             </ul>
-
                         </li>
+                        <li><a href="./app-calender.html">Calendar</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                            class="icon icon-chart-bar-33"></i><span class="nav-text">Charts</span></a>
+                    <ul aria-expanded="false">
+                        <li><a href="./chart-flot.html">Flot</a></li>
+                        <li><a href="./chart-morris.html">Morris</a></li>
+                        <li><a href="./chart-chartjs.html">Chartjs</a></li>
+                        <li><a href="./chart-chartist.html">Chartist</a></li>
+                        <li><a href="./chart-sparkline.html">Sparkline</a></li>
+                        <li><a href="./chart-peity.html">Peity</a></li>
+                    </ul>
+                </li>
+                <li class="nav-label">Components</li>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                            class="icon icon-world-2"></i><span class="nav-text">Bootstrap</span></a>
+                    <ul aria-expanded="false">
+                        <li><a href="./ui-accordion.html">Accordion</a></li>
+                        <li><a href="./ui-alert.html">Alert</a></li>
+                        <li><a href="./ui-badge.html">Badge</a></li>
+                        <li><a href="./ui-button.html">Button</a></li>
+                        <li><a href="./ui-modal.html">Modal</a></li>
+                        <li><a href="./ui-button-group.html">Button Group</a></li>
+                        <li><a href="./ui-list-group.html">List Group</a></li>
+                        <li><a href="./ui-media-object.html">Media Object</a></li>
+                        <li><a href="./ui-card.html">Cards</a></li>
+                        <li><a href="./ui-carousel.html">Carousel</a></li>
+                        <li><a href="./ui-dropdown.html">Dropdown</a></li>
+                        <li><a href="./ui-popover.html">Popover</a></li>
+                        <li><a href="./ui-progressbar.html">Progressbar</a></li>
+                        <li><a href="./ui-tab.html">Tab</a></li>
+                        <li><a href="./ui-typography.html">Typography</a></li>
+                        <li><a href="./ui-pagination.html">Pagination</a></li>
+                        <li><a href="./ui-grid.html">Grid</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                            class="icon icon-plug"></i><span class="nav-text">Plugins</span></a>
+                    <ul aria-expanded="false">
+                        <li><a href="./uc-select2.html">Select 2</a></li>
+                        <li><a href="./uc-nestable.html">Nestedable</a></li>
+                        <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
+                        <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
+                        <li><a href="./uc-toastr.html">Toastr</a></li>
+                        <li><a href="./map-jqvmap.html">Jqv Map</a></li>
+                    </ul>
+                </li>
+                <li><a href="widget-basic.html" aria-expanded="false"><i class="icon icon-globe-2"></i><span
+                            class="nav-text">Widget</span></a></li>
+                <li class="nav-label">Forms</li>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                            class="icon icon-form"></i><span class="nav-text">Forms</span></a>
+                    <ul aria-expanded="false">
+                        <li><a href="./form-element.html">Form Elements</a></li>
+                        <li><a href="./form-wizard.html">Wizard</a></li>
+                        <li><a href="./form-editor-summernote.html">Summernote</a></li>
+                        <li><a href="form-pickers.html">Pickers</a></li>
+                        <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
+                    </ul>
+                </li>
+                <li class="nav-label">Table</li>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                            class="icon icon-layout-25"></i><span class="nav-text">Table</span></a>
+                    <ul aria-expanded="false">
+                        <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
+                        <li><a href="table-datatable-basic.html">Datatable</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-label">Extra</li>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                            class="icon icon-single-copy-06"></i><span class="nav-text">Pages</span></a>
+                    <ul aria-expanded="false">
+                        <li><a href="./page-register.html">Register</a></li>
+                        <li><a href="./page-login.html">Login</a></li>
+                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                            <ul aria-expanded="false">
+                                <li><a href="./page-error-400.html">Error 400</a></li>
+                                <li><a href="./page-error-403.html">Error 403</a></li>
+                                <li><a href="./page-error-404.html">Error 404</a></li>
+                                <li><a href="./page-error-500.html">Error 500</a></li>
+                                <li><a href="./page-error-503.html">Error 503</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./page-lock-screen.html">Lock Screen</a></li>
+                    </ul>
                 </li>
             </ul>
-
         </div>
 
-    </nav>
-    <!-- /. NAV SIDE  -->
 
-    <div id="page-wrapper">
-        <div class="header">
-            <h1 class="page-header">
-                Dashboard <small>Welcome John Doe</small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li class="active">Data</li>
-            </ol>
+    </div>
+    <!--**********************************
+        Sidebar end
+    ***********************************-->
 
-        </div>
-        <div id="page-inner">
+    <!--**********************************
+        Content body start
+    ***********************************-->
+    <div class="content-body">
+        <!-- row -->
 
-            <!-- /. ROW  -->
+ @yield('page')
 
 
-<!-- /. WRAPPER  -->
-<!-- JS Scripts-->
-<!-- jQuery Js -->
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/jquery-1.10.2.js"></script>
-<!-- Bootstrap Js -->
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/bootstrap.min.js"></script>
 
-<!-- Metis Menu Js -->
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/jquery.metisMenu.js"></script>
-<!-- Morris Chart Js -->
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/morris/raphael-2.1.0.min.js"></script>
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/morris/morris.js"></script>
+                        </div>
+                    </div>
+                    <!-- /# card -->
+                </div>
+                <!-- /# column -->
 
 
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/easypiechart.js"></script>
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/easypiechart-data.js"></script>
 
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/Lightweight-Chart/jquery.chart.js"></script>
-
-<!-- Custom Js -->
-<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/custom-scripts.js"></script>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
 
 
-<!-- Chart Js -->
-<script type="text/javascript" src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/custom-scripts.js"></script>
-<script type="text/javascript" src=""></script>
+
+
+                                    </div>
+                                </div>
+                                <div class="progress-content py-2">
+                                    <div class="row">
+
+
+                                </div>
+                                <div class="progress-content py-2">
+                                    <div class="row">
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="progress-content py-2">
+                                    <div class="row">
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="col-lg-4">
+
+
+
+
+                    </div>
+                    <!-- /# card -->
+                </div>
+                <div class="col-lg-6">
+
+
+
+
+                </div>
+                <div class="col-lg-6">
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-6 border-right">
+
+
+
+                            </div>
+                        </div>
+
+
+
+                                    <div class="col-6">
+
+    <!--**********************************
+        Footer end
+    ***********************************-->
+
+    <!--**********************************
+       Support ticket button start
+    ***********************************-->
+
+    <!--**********************************
+       Support ticket button end
+    ***********************************-->
+
+
+
+
+
+<!--**********************************
+    Main wrapper end
+***********************************-->
+
+<!--**********************************
+    Scripts
+***********************************-->
+<!-- Required vendors -->
+<script src="https://demo.themefisher.com/focus/vendor/global/global.min.js"></script>
+<script src="https://demo.themefisher.com/focus/js/quixnav-init.js"></script>
+<script src="https://demo.themefisher.com/focus/js/custom.min.js"></script>
+
+
+<!-- Vectormap -->
+<script src="https://demo.themefisher.com/focus/vendor/raphael/raphael.min.js"></script>
+<script src="https://demo.themefisher.com/focus/vendor/morris/morris.min.js"></script>
+
+
+<script src="https://demo.themefisher.com/focus/vendor/circle-progress/circle-progress.min.js"></script>
+<script src="https://demo.themefisher.com/focus/vendor/chart.js/Chart.bundle.min.js"></script>
+
+<script src="https://demo.themefisher.com/focus/vendor/gaugeJS/dist/gauge.min.js"></script>
+
+<!--  flot-chart js -->
+<script src="https://demo.themefisher.com/focus/vendor/flot/jquery.flot.js"></script>
+<script src="https://demo.themefisher.com/focus/vendor/flot/jquery.flot.resize.js"></script>
+
+<!-- Owl Carousel -->
+<script src="https://demo.themefisher.com/focus/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+<!-- Counter Up -->
+<script src="https://demo.themefisher.com/focus/vendor/jqvmap/js/jquery.vmap.min.js"></script>
+<script src="https://demo.themefisher.com/focus/vendor/jqvmap/js/jquery.vmap.usa.js"></script>
+<script src="https://demo.themefisher.com/focus/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+
+
+<script src="https://demo.themefisher.com/focus/js/dashboard/dashboard-1.js"></script>
 
 </body>
 
