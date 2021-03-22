@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Focus - Bootstrap Admin Dashboard </title>
+    <title>Shahadat Hridoy </title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link rel="stylesheet" href="https://demo.themefisher.com/focus/vendor/owl-carousel/css/owl.carousel.min.css">
@@ -44,11 +44,8 @@
         Nav header start
     ***********************************-->
     <div class="nav-header">
-        <a href="index.html" class="brand-logo">
-            <img class="logo-abbr" src="./images/logo.png" alt="">
-            <img class="logo-compact" src="./images/logo-text.png" alt="">
-            <img class="brand-title" src="./images/logo-text.png" alt="">
-        </a>
+        <div class="text-uppercase"> <strong class="text-primary"> <center><h1 style="color:white;">Shahadat Hridoy</h1></center></strong></div>
+    </div>
 
         <div class="nav-control">
             <div class="hamburger">
@@ -70,7 +67,7 @@
 
 
 
-@include('backend.layouts.header')
+@include('backend.partial.header')
     <!--**********************************
         Header end ti-comment-alt
     ***********************************-->
@@ -83,7 +80,7 @@
 
 
 
-@include('backend.layouts.sidebar')
+@include('backend.partial.sidebar')
     <!--**********************************
         Sidebar end
     ***********************************-->
