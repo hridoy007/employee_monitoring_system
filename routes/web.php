@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Backend\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin');
+    return view('main');
 });
+Route::get('/Login',[LoginController::class,'login'])->name('login');
+Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee');

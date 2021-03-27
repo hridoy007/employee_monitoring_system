@@ -8,11 +8,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Shahadat Hridoy </title>
     <!-- Favicon icon -->
+
+
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link rel="stylesheet" href="https://demo.themefisher.com/focus/vendor/owl-carousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="https://demo.themefisher.com/focus/vendor/owl-carousel/css/owl.theme.default.min.css">
     <link href="https://demo.themefisher.com/focus/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
     <link href="https://demo.themefisher.com/focus/css/style.css" rel="stylesheet">
+
 
 
 
@@ -44,7 +47,7 @@
         Nav header start
     ***********************************-->
     <div class="nav-header">
-        <div class="text-uppercase"> <strong class="text-primary"> <center><h1 style="color:white;">Shahadat Hridoy</h1></center></strong></div>
+        <div class="text-uppercase"> <strong class="text-primary"> <center><h3 style="color:white;">Employee Monitoring System</h3></center></strong></div>
     </div>
 
         <div class="nav-control">
@@ -185,6 +188,9 @@
 
                                     <div class="col-6">
 
+
+
+
     <!--**********************************
         Footer end
     ***********************************-->
@@ -238,6 +244,11 @@
 
 
 <script src="https://demo.themefisher.com/focus/js/dashboard/dashboard-1.js"></script>
+
+                                        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+                                        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
 
 </body>
 

@@ -2,14 +2,14 @@
     <div class="quixnav-scroll">
         <ul class="metismenu" id="menu">
             <li class="nav-label first">Main Menu</li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            <li><a class="has-arrow" href="{{route('login')}}" aria-expanded="false"><i
                         class="icon icon-single-04"></i><span class="nav-text">Login</span></a>
 
 
             </li>
 
 
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            <li><a class="has-arrow" href="{{route('employee')}}" aria-expanded="false"><i
                         class="icon icon-app-store"></i><span class="nav-text">Employee</span></a>
 
             </li>
