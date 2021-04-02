@@ -13,7 +13,7 @@
                         class="icon icon-app-store"></i><span class="nav-text">Employee</span></a>
 
             </li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            <li><a class="has-arrow" href="{{route('department')}}" aria-expanded="false"><i
                         class="icon icon-chart-bar-33"></i><span class="nav-text">Department</span></a>
 
 
