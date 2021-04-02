@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\DepartmentController;
+use App\Http\Controllers\Backend\ProjectController;
+use App\Http\Controllers\Backend\ProjectteamController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +23,5 @@ Route::get('/', function () {
 Route::get('/Login',[LoginController::class,'login'])->name('login');
 Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee');
 Route::get('/Department',[DepartmentController::class,'department'])->name('department');
+Route::get('/Project',[ProjectController::class,'project'])->name('project');
+Route::get('/projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');

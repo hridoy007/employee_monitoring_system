@@ -19,7 +19,7 @@
 
             </li>
 
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            <li><a class="has-arrow" href="{{route('project')}}" aria-expanded="false"><i
                         class="icon icon-world-2"></i><span class="nav-text">Project</span></a>
 
 
@@ -27,7 +27,7 @@
 
 
 
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            <li><a class="has-arrow" href="{{route('projectteam')}}" aria-expanded="false"><i
                         class="icon icon-plug"></i><span class="nav-text">Project Team</span></a>
 
             </li>

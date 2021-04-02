@@ -12,7 +12,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Employee</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Department</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -23,11 +23,11 @@
                     <form class="form-horizontal" method="post" action="#">
 
                         <div class="form-group">
-                            <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                            <label for="name" class="cols-sm-2 control-label">Department</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" />
                                 </div>
                             </div>
                         </div>
@@ -49,13 +49,11 @@
 
                         <div class="input-group">
                             <span class="input-group-addon"></span>
-                            <input type="text" class="form-control" name="" id="Name" placeholder="Department" />
+                            <input type="text" class="form-control" name="" id="Name" >
                         </div>
                 </div>
             </div>
-            <div class="form-group ">
-                <button type="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
-            </div>
+
 
             </form>
         </div>
