@@ -35,15 +35,13 @@
 
 
             <li><a class="has-arrow" href="{{route('attendance')}}" aria-expanded="false"><i
-                        class="icon icon-plug"></i><span class="nav-text">Project Team</span></a>
+                        class="icon icon-globe 2"></i><span class="nav-text">Attendance</span></a>
 
             </li>
 
 
 
 
-            <li><a href="widget-basic.html" aria-expanded="false"><i class="icon icon-globe-2"></i><span
-                        class="nav-text">Attendance</span></a></li>
 
 
 
