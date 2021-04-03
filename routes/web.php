@@ -6,6 +6,8 @@ use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\DepartmentController;
 use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\ProjectteamController;
+use App\Http\Controllers\Backend\AttendanceController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +27,4 @@ Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee')
 Route::get('/Department',[DepartmentController::class,'department'])->name('department');
 Route::get('/Project',[ProjectController::class,'project'])->name('project');
 Route::get('/projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');
+Route::get('Attendance',[AttendanceController::class,'attendance'])->name('attendance');
