@@ -9,7 +9,7 @@ class AttendanceController extends Controller
 {
     public function attendance()
     {
-        return view ('backend.layouts.attendance');
+        return view ('backend.layouts.attendance.attendance');
     }
     //
 }

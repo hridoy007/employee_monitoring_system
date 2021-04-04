@@ -9,7 +9,7 @@ class DepartmentController extends Controller
 {
     public function department()
     {
-        return view ('backend.layouts.department');
+        return view ('backend.layouts.department.department');
     }
     //
 }

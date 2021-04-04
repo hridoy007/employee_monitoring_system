@@ -10,7 +10,7 @@ class ProjectteamController extends Controller
 {
     public function projectteam()
     {
-        return view ('backend.layouts.projectteam');
+        return view ('backend.layouts.projectteam.projectteam');
     }
     //
 }

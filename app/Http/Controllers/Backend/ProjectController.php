@@ -10,7 +10,7 @@ class ProjectController extends Controller
 {
     public function project()
     {
-        return view ('backend.layouts.project');
+        return view ('backend.layouts.project.project');
     }
     //
 }

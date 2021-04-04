@@ -9,7 +9,7 @@ class EmployeeController extends Controller
 {
     public function employee()
     {
-        return view ('backend.layouts.employee');
+        return view ('backend.layouts.employee.employee');
     }
     //
 }
