@@ -22,9 +22,22 @@ use App\Http\Controllers\Backend\AttendanceController;
 Route::get('/', function () {
     return view('main');
 });
-Route::get('/Login',[LoginController::class,'login'])->name('login');
+
+//login
+Route::get('/Login',[LoginController::class,'login'])->name('login.view');
+Route::post('/login/create',[LoginController::class,'loginCreate'])->name('login.create');
+
+//employee
 Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee');
+
+//department
 Route::get('/Department',[DepartmentController::class,'department'])->name('department');
+
+//project
 Route::get('/Project',[ProjectController::class,'project'])->name('project');
+
+//projectteam
 Route::get('/projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');
+
+//attendance
 Route::get('Attendance',[AttendanceController::class,'attendance'])->name('attendance');
