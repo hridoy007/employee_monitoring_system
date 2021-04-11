@@ -20,7 +20,8 @@
                 <div class="modal-body">
                     {{--form start--}}
 
-                    <form class="form-horizontal" method="post" action="#">
+                    <form  method="post" action="{{route('employee.list')}}">
+                        @csrf
 
                         <div class="form-group">
                             <label for="name" class="cols-sm-2 control-label">Name</label>
@@ -36,7 +37,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="Designation" id="Designation" placeholder="Role" />
+                                    <input type="text" class="form-control" name="designation" id="Designation" placeholder="Role" />
                                 </div>
                             </div>
                         </div>
@@ -45,24 +46,34 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="Submit" id="ID" placeholder="ID" />
+                                    <input type="number" class="form-control" name="submit" id="ID" placeholder="ID" />
                                 </div>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Department</label>
+                            <label for="username" class="cols-sm-2 control-label">Department</label>
                             <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"></span>
+                                    <input type="text" class="form-control" name="department" id="department" placeholder="department" />
+                                </div>
                             </div>
                         </div>
 
-                        <div class="input-group">
-                            <span class="input-group-addon"></span>
-                            <input type="text" class="form-control" name="Department" id="Name" placeholder="Department" />
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Password</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"></span>
+                                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter Your Password" />
+                                </div>
+                            </div>
                         </div>
-                </div>
-            </div>
+
+
             <div class="form-group ">
-                <button type="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
+                <button type="submit" name="submit"  class="btn btn-primary btn-lg btn-block login-button">Add Employee</button>
             </div>
 
             </form>
@@ -75,10 +86,7 @@
 
 
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
+
     </div>
     </div>
     </div>

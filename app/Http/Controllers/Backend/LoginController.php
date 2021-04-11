@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function login()
     {
-        return view('backend.layouts.login.login');
+        return view('backend.layouts.admin.admin');
     }
     public function loginCreate(Request $request)
 
@@ -19,10 +19,11 @@ class LoginController extends Controller
                  Admin::create([
                      'name'=>$request->name,
                      'email'=>$request->email,
-                     'password'=>$request->password
+                     'id'=>$request->id,
+                     'password'=>$request->password,
 
     ]);
 
-                 return redirect()->route('login.view');
+                 return redirect()->route('admin.view');
     }
 }

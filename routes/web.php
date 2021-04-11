@@ -23,12 +23,13 @@ Route::get('/', function () {
     return view('main');
 });
 
-//login
-Route::get('/Login',[LoginController::class,'login'])->name('login.view');
-Route::post('/login/create',[LoginController::class,'loginCreate'])->name('login.create');
+//admin
+Route::get('/Login',[LoginController::class,'login'])->name('admin.view');
+Route::post('/admin/create',[LoginController::class,'loginCreate'])->name('admin.create');
 
 //employee
 Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee');
+Route::post('/employee/details',[EmployeeController::class,'employeeDetails'])->name('employee.list');
 
 //department
 Route::get('/Department',[DepartmentController::class,'department'])->name('department');

@@ -4,7 +4,7 @@
 
     <!-- Button trigger modal -->
    <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Add Employee
+        Admin Login
     </button></center>
 
     <!-- Modal -->
@@ -20,15 +20,15 @@
                 <div class="modal-body">
                            {{--form start--}}
 
-                    <form class="form-horizontal" method="post" action="{{route('login.create')}}">
+                    <form class="form-horizontal" method="post" action="{{route('admin.create')}}">
                         @csrf
 
                         <div class="form-group">
-                            <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                            <label for="name" class="cols-sm-2 control-label">Enter Name</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input  type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
+                                    <input  type="text" class="form-control" name="name" id="name" placeholder="Name" />
                                 </div>
                             </div>
                         </div>
@@ -37,13 +37,24 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">ID</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"></span>
+                                    <input type="text" class="form-control" name="Submit" id="ID" placeholder="ID" />
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="password" class="cols-sm-2 control-label">Password</label>
+                        </div>
 
 
                                 <div class="input-group">
