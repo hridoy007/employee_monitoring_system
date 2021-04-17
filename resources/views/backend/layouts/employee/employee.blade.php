@@ -7,6 +7,44 @@
             Employee Login
         </button></center>
 
+
+    <table class="table table_bordered table-hover">
+        <thead>
+
+        <th scope="col">ID</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Employee Photo</th>
+
+
+        </thead>
+        <tbody>
+
+        @foreach($employee as $key=>$data)
+
+            <tr>
+                <th scope="row">{{$key+1}}</th>
+
+                <td>{{$data->name}}</td>
+                <td>{{$data->designation}}</td>
+                <td>{{$data->department}}</td>
+                <td>{{$data->password}}</td>
+
+
+                <td>
+                    <a class="btn btn-success" href="">View</a>
+                    <a class="btn btn-danger" href="{{route('employee.list',$data->id)}}">Delete</a>
+                    <a class="btn btn-info" href="">Edit</a>
+
+                </td>
+
+            </tr>
+
+        @endforeach
+        </tbody>
+    </table><br>
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

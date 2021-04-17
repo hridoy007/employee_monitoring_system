@@ -33,6 +33,8 @@ Route::post('/employee/details',[EmployeeController::class,'employeeDetails'])->
 
 //department
 Route::get('/Department',[DepartmentController::class,'department'])->name('department');
+Route::post('/department/info',[DepartmentController::class,'departmentInfo'])->name('department.view');
+
 
 //project
 Route::get('/Project',[ProjectController::class,'project'])->name('project');

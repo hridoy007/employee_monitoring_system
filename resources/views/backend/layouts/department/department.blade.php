@@ -4,7 +4,7 @@
 
     <!-- Button trigger modal -->
     <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Department
+            Department Info
         </button></center>
 
     <!-- Modal -->
@@ -20,7 +20,8 @@
                 <div class="modal-body">
                     {{--form start--}}
 
-                    <form class="form-horizontal" method="post" action="#">
+                    <form  method="post" action="{{route('department.view')}}">
+                        @csrf
 
                         <div class="form-group">
                             <label for="name" class="cols-sm-2 control-label">Department</label>
@@ -32,26 +33,30 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="cols-sm-2 control-label">Employee Roles</label>
+                            <label for="role" class="cols-sm-2 control-label">Employee Roles</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="Employee Roles" id="Employee Roles" placeholder="Role" />
+                                    <input type="text" class="form-control" name="employeeRoles" id="Employee Roles" placeholder="Role" />
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Total Employee</label>
+                            <label for="number" class="cols-sm-2 control-label">Total Employee</label>
                             <div class="cols-sm-10">
                             </div>
                         </div>
 
                         <div class="input-group">
                             <span class="input-group-addon"></span>
-                            <input type="text" class="form-control" name="" id="Name" >
+                            <input type="text" class="form-control" name="totalEmployee" id="Name" >
                         </div>
                 </div>
+            </div>
+
+            <div class="form-group ">
+                <button type="submit" name="submit"  class="btn btn-primary btn-lg btn-block login-button">Add Department</button>
             </div>
 
 
@@ -65,10 +70,7 @@
 
 
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
+
     </div>
     </div>
     </div>

@@ -12,7 +12,8 @@ class EmployeeController extends Controller
 {
     public function employee()
     {
-        return view ('backend.layouts.employee.employee');
+        $employee=Employee::all();
+        return view ('backend.layouts.employee.employee',compact('employee'));
     }
     public function employeeDetails(Request $request)
     {

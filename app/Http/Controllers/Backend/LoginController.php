@@ -10,7 +10,8 @@ class LoginController extends Controller
 {
     public function login()
     {
-        return view('backend.layouts.admin.admin');
+        $admin=Admin::all();
+        return view('backend.layouts.admin.admin',compact('admin'));
     }
     public function loginCreate(Request $request)
 

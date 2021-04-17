@@ -7,6 +7,41 @@
         Admin Login
     </button></center>
 
+
+
+    <table class="table table_bordered table-hover">
+        <thead>
+
+        <th scope="col">ID</th>
+        <th scope="col">Admin Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Admin Photo</th>
+
+
+        </thead>
+        <tbody>
+
+        @foreach($admin as $key=>$data)
+
+            <tr>
+                <th scope="row">{{$key+1}}</th>
+
+                <td>{{$data->name}}</td>
+                <td>{{$data->email}}</td>
+                <td>{{$data->password}}</td>
+                <td>
+                    <a class="btn btn-success" href="">View</a>
+                    <a class="btn btn-danger" href="{{route('admin.view',$data->id)}}">Delete</a>
+                    <a class="btn btn-info" href="">Edit</a>
+
+                </td>
+
+            </tr>
+
+            @endforeach
+        </tbody>
+    </table><br>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
