@@ -32,12 +32,14 @@ Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee')
 Route::post('/employee/details',[EmployeeController::class,'employeeDetails'])->name('employee.list');
 
 //department
-Route::get('/Department',[DepartmentController::class,'department'])->name('department');
-Route::post('/department/info',[DepartmentController::class,'departmentInfo'])->name('department.view');
+Route::get('/Department',[DepartmentController::class,'department'])->name('department.view');
+Route::post('/department/info',[DepartmentController::class,'departmentInfo'])->name('department.create');
 
 
 //project
-Route::get('/Project',[ProjectController::class,'project'])->name('project');
+Route::get('/Project',[ProjectController::class,'project'])->name('project.view');
+Route::post('/project/details',[ProjectController::class,'projectDetails'])->name('project.create');
+
 
 //projectteam
 Route::get('/projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');

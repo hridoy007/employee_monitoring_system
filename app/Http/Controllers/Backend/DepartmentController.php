@@ -10,20 +10,22 @@ class DepartmentController extends Controller
 {
     public function department()
     {
-        return view('backend.layouts.department.department');
+        $department=Department::paginate('2');
+        return view('backend.layouts.department.department',compact('department'));
     }
 
         public function departmentInfo(Request $request)
 
 {
-    Department::create([
-            'dept_name'=>$request->name,
+//   dd($request->all());
+   Department::create([
+            'dept_name'=>$request->deptName,
             'employee_role'=>$request->employeeRoles,
             'total_employee'=>$request->totalEmployee
 
 
         ]);
-     return redirect()->route('department');
+//     return redirect()->route('department.view');
     }
     //
 }

@@ -4,7 +4,7 @@
 
     <!-- Button trigger modal -->
     <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Employee Login
+            Add Employee
         </button></center>
 
 
@@ -15,7 +15,9 @@
         <th scope="col">Employee Name</th>
         <th scope="col">Designation</th>
         <th scope="col">Contact</th>
-        <th scope="col">Employee Photo</th>
+{{--        <th scope="col">Employee Photo</th>--}}
+        <th scope="col">Actions</th>
+
 
 
         </thead>
@@ -29,7 +31,7 @@
                 <td>{{$data->name}}</td>
                 <td>{{$data->designation}}</td>
                 <td>{{$data->department}}</td>
-                <td>{{$data->password}}</td>
+                <td>{{$data->contact}}</td>
 
 
                 <td>
@@ -111,7 +113,7 @@
 
 
             <div class="form-group ">
-                <button type="submit" name="submit"  class="btn btn-primary btn-lg btn-block login-button">Add Employee</button>
+                <button type="submit" name="submit"  class="btn btn-primary btn-lg btn-block login-button">Submit</button>
             </div>
 
             </form>

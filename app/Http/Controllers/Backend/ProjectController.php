@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -10,9 +11,25 @@ class ProjectController extends Controller
 {
     public function project()
     {
-        return view ('backend.layouts.project.project');
+        $project=Project::paginate('2');
+        return view ('backend.layouts.project.project',compact('project'));
     }
-    //
+    public function projectDetails(Request $request)
+    {
+        Project::create([
+
+            'project_name'=>$request->projectName,
+            'dept_name'=>$request->deptName,
+            'deadline'=>$request->date,
+            'project_code'=>$request->projectCode
+
+        ]);
+
+        return redirect()->route('project.view');
+
+
+
+    }
 }
 
 

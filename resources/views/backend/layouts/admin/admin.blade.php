@@ -15,8 +15,8 @@
         <th scope="col">ID</th>
         <th scope="col">Admin Name</th>
         <th scope="col">Email</th>
-        <th scope="col">Password</th>
-        <th scope="col">Admin Photo</th>
+{{--        <th scope="col">Admin Photo</th>--}}
+        <th scope="col">Actions</th>
 
 
         </thead>
@@ -29,7 +29,7 @@
 
                 <td>{{$data->name}}</td>
                 <td>{{$data->email}}</td>
-                <td>{{$data->password}}</td>
+
                 <td>
                     <a class="btn btn-success" href="">View</a>
                     <a class="btn btn-danger" href="{{route('admin.view',$data->id)}}">Delete</a>

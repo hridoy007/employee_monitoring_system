@@ -17,7 +17,7 @@ class CreateDepartmentsTable extends Migration
             $table->id();
             $table->string('dept_name');
             $table->string('employee_role');
-            $table->integer('total_employee');
+            $table->string('total_employee');
             $table->timestamps();
         });
     }
