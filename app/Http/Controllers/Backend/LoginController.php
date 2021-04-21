@@ -25,6 +25,14 @@ class LoginController extends Controller
 
     ]);
 
-                 return redirect()->route('admin.view');
+                 return redirect()->route('admin.view')->with('success','Admin Added Successfully');
     }
+
+    public function adminDelete ($id)
+    {
+        $admin=Admin::find($id);
+        $admin->delete();
+        return redirect()->route('admin.view')->with('success','Admin Removed Successfully');
+    }
+
 }

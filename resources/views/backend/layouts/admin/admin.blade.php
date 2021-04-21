@@ -7,6 +7,13 @@
         Admin Login
     </button></center>
 
+    @if(session()->has('success'))
+
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
+
 
 
     <table class="table table_bordered table-hover">
@@ -32,7 +39,7 @@
 
                 <td>
                     <a class="btn btn-success" href="">View</a>
-                    <a class="btn btn-danger" href="{{route('admin.view',$data->id)}}">Delete</a>
+                    <a class="btn btn-danger" href="{{route('admin.delete',$data->id)}}">Delete</a>
                     <a class="btn btn-info" href="">Edit</a>
 
                 </td>
@@ -42,6 +49,8 @@
             @endforeach
         </tbody>
     </table><br>
+
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -77,15 +86,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="username" class="cols-sm-2 control-label">ID</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="Submit" id="ID" placeholder="ID" />
-                                </div>
-                            </div>
-                        </div>
+
 
                         <div class="form-group">
                             <label for="password" class="cols-sm-2 control-label">Password</label>
@@ -96,6 +97,8 @@
                                     <span class="input-group-addon"></span>
                                     <input type="password" class="form-control" name="password" id="enter" placeholder="Enter your Password" />
                                 </div>
+
+                        <br>
 
 
                         <div class="form-group ">

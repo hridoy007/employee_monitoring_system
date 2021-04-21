@@ -7,6 +7,44 @@
             Project Management
         </button></center>
 
+    <table class="table table_bordered table-hover">
+        <thead>
+
+        <th scope="col">ID</th>
+        <th scope="col">Team Name</th>
+        <th scope="col">Project Code</th>
+        <th scope="col">Actions</th>
+
+
+
+        </thead>
+        <tbody>
+
+        @foreach($projectteam as $key=>$data)
+
+            <tr>
+                <th scope="row">{{$key+1}}</th>
+
+                <td>{{$data->name}}</td>
+                <td>{{$data->project_code}}</td>
+
+
+
+
+                <td>
+                    <a class="btn btn-success" href="">View</a>
+                    <a class="btn btn-danger" href="">Delete</a>
+                    <a class="btn btn-info" href="">Edit</a>
+
+                </td>
+
+            </tr>
+
+        @endforeach
+        </tbody>
+    </table><br>
+    {{$projectteam->links()}}
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -18,16 +56,18 @@
                     </button>
                 </div>
                 <div class="modal-body">
+
                     {{--form start--}}
 
-                    <form class="form-horizontal" method="post" action="#">
+                    <form class="form-horizontal" method="post" action="{{route('projectteam.details')}}">
+                        @csrf
 
                         <div class="form-group">
                             <label for="name" class="cols-sm-2 control-label">Team Name</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" />
+                                    <input type="text" class="form-control" name="teamName" id="name" placeholder="Name" />
                                 </div>
                             </div>
                         </div>
@@ -36,23 +76,20 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="Code" id="Code" placeholder="Code" />
+                                    <input type="text" class="form-control" name="projectCode" id="Code" placeholder="Code" />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Employee Id</label>
-                            <div class="cols-sm-10">
-                            </div>
+
+
+<br>
+                        <div class="form-group ">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Submit</button>
                         </div>
 
-                        <div class="input-group">
-                            <span class="input-group-addon"></span>
-                            <input type="text" class="form-control" name="" id="Name" >
-                        </div>
-                </div>
             </div>
+
 
 
             </form>
@@ -65,10 +102,7 @@
 
 
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
+
     </div>
     </div>
     </div>

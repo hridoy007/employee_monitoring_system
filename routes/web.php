@@ -26,6 +26,7 @@ Route::get('/', function () {
 //admin
 Route::get('/Login',[LoginController::class,'login'])->name('admin.view');
 Route::post('/admin/create',[LoginController::class,'loginCreate'])->name('admin.create');
+Route::get('/admin/delete/{id}',[LoginController::class,'adminDelete'])->name('admin.delete');
 
 //employee
 Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee');
@@ -43,6 +44,8 @@ Route::post('/project/details',[ProjectController::class,'projectDetails'])->nam
 
 //projectteam
 Route::get('/projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');
+Route::post('/projectTeam/Info',[ProjectteamController::class,'projectteamInfo'])->name('projectteam.details');
 
 //attendance
 Route::get('Attendance',[AttendanceController::class,'attendance'])->name('attendance');
+Route::post('/attendance/Info',[AttendanceController::class,'attendanceInfo'])->name('attendance.create');
