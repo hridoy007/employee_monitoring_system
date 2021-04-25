@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Department;
 use App\Models\Backend\Project;
 use Illuminate\Http\Request;
 
@@ -25,10 +26,16 @@ class ProjectController extends Controller
 
         ]);
 
-        return redirect()->route('project.view');
+        return redirect()->route('project.view')->with('success','Project Added Successfully');
 
 
 
+    }
+    public function projectDelete ($id)
+    {
+        $project=Project::find($id);
+        $project->delete();
+        return redirect()->route('project.view')->with('success','Project Removed Successfully');
     }
 }
 

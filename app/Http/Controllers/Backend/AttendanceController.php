@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Attendance;
+use App\Models\Backend\Projectteam;
 use Illuminate\Http\Request;
 
 class AttendanceController extends Controller
@@ -28,7 +29,13 @@ class AttendanceController extends Controller
         ]);
 
 
-        return redirect()->route('attendance');
+        return redirect()->route('attendance')->with('success','Attendance Recorded Successfully');
+    }
+    public function attendanceDelete ($id)
+    {
+        $attendance=Attendance::find($id);
+        $attendance->delete();
+        return redirect()->route('attendance')->with('success','Attendance Removed Successfully');
     }
 
 }

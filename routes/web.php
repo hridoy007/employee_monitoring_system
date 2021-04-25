@@ -42,12 +42,15 @@ Route::get('/department/delete/{id}',[DepartmentController::class,'departmentDel
 //project
 Route::get('/Project',[ProjectController::class,'project'])->name('project.view');
 Route::post('/project/details',[ProjectController::class,'projectDetails'])->name('project.create');
+Route::get('/project/delete/{id}',[ProjectController::class,'projectDelete'])->name('project.delete');
 
 
 //projectteam
 Route::get('/projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');
 Route::post('/projectTeam/Info',[ProjectteamController::class,'projectteamInfo'])->name('projectteam.details');
+Route::get('/projectteam/delete/{id}',[ProjectteamController::class,'projectteamDelete'])->name('projectteam.delete');
 
 //attendance
 Route::get('Attendance',[AttendanceController::class,'attendance'])->name('attendance');
 Route::post('/attendance/Info',[AttendanceController::class,'attendanceInfo'])->name('attendance.create');
+Route::get('/attendance/delete/{id}',[AttendanceController::class,'attendanceDelete'])->name('attendance.delete');

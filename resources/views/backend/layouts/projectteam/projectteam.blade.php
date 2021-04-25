@@ -7,6 +7,13 @@
             Project Management
         </button></center>
 
+    @if(session()->has('success'))
+
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
+
     <table class="table table_bordered table-hover">
         <thead>
 
@@ -33,7 +40,7 @@
 
                 <td>
                     <a class="btn btn-success" href="">View</a>
-                    <a class="btn btn-danger" href="">Delete</a>
+                    <a class="btn btn-danger" href="{{route('projectteam.delete',$data->id)}}">Delete</a>
                     <a class="btn btn-info" href="">Edit</a>
 
                 </td>

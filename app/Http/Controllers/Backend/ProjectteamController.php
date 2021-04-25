@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Project;
 use App\Models\Backend\Projectteam;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,14 @@ class ProjectteamController extends Controller
         ]);
 
 
-        return redirect()->route('projectteam');
+        return redirect()->route('projectteam')->with('success','Project team Added Successfully');
+    }
+
+    public function projectteamDelete ($id)
+    {
+        $projectteam=Projectteam::find($id);
+        $projectteam->delete();
+        return redirect()->route('projectteam')->with('success','Project team Removed Successfully');
     }
 
 }
