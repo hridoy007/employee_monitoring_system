@@ -9,7 +9,7 @@
             </li>
 
 
-            <li><a class="has-arrow" href="{{route('employee')}}" aria-expanded="false"><i
+            <li><a class="has-arrow" href="{{route('employee.view')}}" aria-expanded="false"><i
                         class="icon icon-app-store"></i><span class="nav-text">Employee</span></a>
 
             </li>

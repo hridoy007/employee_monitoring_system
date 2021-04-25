@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Department;
+use App\Models\Backend\Employee;
 use Illuminate\Http\Request;
 
 class DepartmentController extends Controller
@@ -25,7 +26,15 @@ class DepartmentController extends Controller
 
 
         ]);
-//     return redirect()->route('department.view');
+     return redirect()->route('department.view')->with('success','Department Added Successfully');
     }
-    //
+
+    public function departmentDelete ($id)
+    {
+        $department=Department::find($id);
+        $department->delete();
+        return redirect()->route('department.view')->with('success','Department Removed Successfully');
+    }
+
+
 }

@@ -29,12 +29,14 @@ Route::post('/admin/create',[LoginController::class,'loginCreate'])->name('admin
 Route::get('/admin/delete/{id}',[LoginController::class,'adminDelete'])->name('admin.delete');
 
 //employee
-Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee');
+Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee.view');
 Route::post('/employee/details',[EmployeeController::class,'employeeDetails'])->name('employee.list');
+Route::get('/employee/delete/{id}',[EmployeeController::class,'employeeDelete'])->name('employee.delete');
 
 //department
 Route::get('/Department',[DepartmentController::class,'department'])->name('department.view');
 Route::post('/department/info',[DepartmentController::class,'departmentInfo'])->name('department.create');
+Route::get('/department/delete/{id}',[DepartmentController::class,'departmentDelete'])->name('department.delete');
 
 
 //project

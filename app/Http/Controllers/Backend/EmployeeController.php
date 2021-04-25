@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\admin;
 use App\Models\Backend\Employee;
 
 
@@ -26,9 +27,16 @@ class EmployeeController extends Controller
 
         ]);
 
-        return redirect()->route('employee');
+        return redirect()->route('employee.view')->with('success','Employee Added Successfully');
 
 
 
+    }
+
+    public function employeeDelete ($id)
+    {
+        $employee=Employee::find($id);
+        $employee->delete();
+        return redirect()->route('employee.view')->with('success','Employee Removed Successfully');
     }
 }
