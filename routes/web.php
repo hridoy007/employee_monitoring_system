@@ -7,6 +7,8 @@ use App\Http\Controllers\Backend\DepartmentController;
 use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\ProjectteamController;
 use App\Http\Controllers\Backend\AttendanceController;
+use App\Http\Controllers\Backend\LeaveController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -46,11 +48,18 @@ Route::get('/project/delete/{id}',[ProjectController::class,'projectDelete'])->n
 
 
 //projectteam
-Route::get('/projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');
+Route::get('/Projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');
 Route::post('/projectTeam/Info',[ProjectteamController::class,'projectteamInfo'])->name('projectteam.details');
 Route::get('/projectteam/delete/{id}',[ProjectteamController::class,'projectteamDelete'])->name('projectteam.delete');
+
 
 //attendance
 Route::get('Attendance',[AttendanceController::class,'attendance'])->name('attendance');
 Route::post('/attendance/Info',[AttendanceController::class,'attendanceInfo'])->name('attendance.create');
 Route::get('/attendance/delete/{id}',[AttendanceController::class,'attendanceDelete'])->name('attendance.delete');
+
+//leave
+Route::get('Leave',[LeaveController::class,'leave'])->name('leave.view');
+Route::post('/leave/info',[LeaveController::class,'leaveInfo'])->name('leave.create');
+Route::get('/leave/delete/{id}',[LeaveController::class,'leaveDelete'])->name('leave.delete');
+

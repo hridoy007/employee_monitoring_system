@@ -40,6 +40,16 @@
             </li>
 
 
+            <li><a class="has-arrow" href="{{route('leave.view')}}" aria-expanded="false"><i
+                        class="icon icon-globe"></i><span class="nav-text">Leave</span></a>
+
+            </li>
+
+
+            <li><a class="has-arrow" href="('report')" aria-expanded="false"><i
+                        class="icon icon-globe"></i><span class="nav-text">Report</span></a>
+
+            </li>
 
 
 
@@ -47,6 +57,8 @@
 
 
 
+
+        </ul>
     </div>
 
 
