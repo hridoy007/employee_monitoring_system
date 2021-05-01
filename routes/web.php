@@ -63,3 +63,6 @@ Route::get('Leave',[LeaveController::class,'leave'])->name('leave.view');
 Route::post('/leave/info',[LeaveController::class,'leaveInfo'])->name('leave.create');
 Route::get('/leave/delete/{id}',[LeaveController::class,'leaveDelete'])->name('leave.delete');
 
+
+
+

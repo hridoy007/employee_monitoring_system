@@ -20,10 +20,11 @@
         <thead>
 
         <th scope="col">ID</th>
+        <th scope="col">Admin Image</th>
         <th scope="col">Admin Name</th>
         <th scope="col">Email</th>
 {{--        <th scope="col">Admin Photo</th>--}}
-        <th scope="col">Actions</th>
+{{--        <th scope="col">Actions</th>--}}
 
 
         </thead>
@@ -34,12 +35,17 @@
             <tr>
                 <th scope="row">{{$key+1}}</th>
 
+                <td>
+
+                    <img style="width: 100px;" src="{{url('/images/admins/',$data->image)}}" alt="Image Not Found">
+
+</td>
                 <td>{{$data->name}}</td>
                 <td>{{$data->email}}</td>
 
                 <td>
                     <a class="btn btn-success" href="">View</a>
-                    <a class="btn btn-danger" href="{{route('admin.delete',$data->id)}}">Delete</a>
+              <a class="btn btn-danger" href="{{route('admin.delete',$data->id)}}">Delete</a>
                     <a class="btn btn-info" href="">Edit</a>
 
                 </td>
@@ -64,7 +70,7 @@
                 <div class="modal-body">
                            {{--form start--}}
 
-                    <form class="form-horizontal" method="post" action="{{route('admin.create')}}">
+                    <form class="form-horizontal" enctype="multipart/form-data" method="post" action="{{route('admin.create')}}">
                         @csrf
 
                         <div class="form-group">
@@ -99,6 +105,19 @@
                                 </div>
 
                         <br>
+                        <div class="form-group">
+                            <label for="" class="cols-sm-2 control-label">Upload Image</label>
+                        </div>
+
+
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <input type="file" class="form-control" name="admin_image" id="enter" placeholder="Insert Image" />
+                        </div>
+
+                        <br>
+
+
 
 
                         <div class="form-group ">

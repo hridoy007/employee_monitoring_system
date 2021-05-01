@@ -19,6 +19,7 @@
         <thead>
 
         <th scope="col">ID</th>
+        <th scope="col">Employee Image</th>
         <th scope="col">Employee Name</th>
         <th scope="col">Designation</th>
         <th scope="col">Contact</th>
@@ -34,6 +35,12 @@
 
             <tr>
                 <th scope="row">{{$key+1}}</th>
+
+                <td>
+
+                    <img style="width: 100px;" src="{{url('/images/employees/',$data->image)}}" alt="Image Not Found">
+
+                </td>
 
                 <td>{{$data->name}}</td>
                 <td>{{$data->designation}}</td>
@@ -67,7 +74,7 @@
                 <div class="modal-body">
                     {{--form start--}}
 
-                    <form  method="post" action="{{route('employee.list')}}">
+                    <form enctype="multipart/form-data" method="post" action="{{route('employee.list')}}">
                         @csrf
 
                         <div class="form-group">
@@ -117,6 +124,18 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label for="" class="cols-sm-2 control-label">Upload Image</label>
+                        </div>
+
+
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <input type="file" class="form-control" name="employee_image" id="enter" placeholder="Insert Image" />
+                        </div>
+
+                        <br>
 
 
             <div class="form-group ">

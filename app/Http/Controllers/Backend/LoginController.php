@@ -16,11 +16,23 @@ class LoginController extends Controller
     public function loginCreate(Request $request)
 
     {
+        $user_file = "";
+
+        if ($request->hasFile('admin_image')) {
+
+            $file = $request->file('admin_image');
+            if ($file->isValid()) {
+
+                $user_file = date('Ymdhms') . "." . $file->getClientOriginalExtension();
+                $file->storeAs('admins', $user_file);
+            }
+        }
 
                  Admin::create([
                      'name'=>$request->name,
                      'email'=>$request->email,
-                     'id'=>$request->id,
+                     'image'=>$user_file,
+
                      'password'=>$request->password,
 
     ]);

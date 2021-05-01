@@ -35,7 +35,7 @@
 
 
             <li><a class="has-arrow" href="{{route('attendance')}}" aria-expanded="false"><i
-                        class="icon icon-globe 2"></i><span class="nav-text">Attendance</span></a>
+                        class="icon icon-world-2"></i><span class="nav-text">Attendance</span></a>
 
             </li>
 

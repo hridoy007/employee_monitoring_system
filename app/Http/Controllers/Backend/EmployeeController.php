@@ -18,11 +18,23 @@ class EmployeeController extends Controller
     }
     public function employeeDetails(Request $request)
     {
+        $user_file = "";
+
+        if ($request->hasFile('employee_image')) {
+
+            $file = $request->file('employee_image');
+            if ($file->isValid()) {
+
+                $user_file = date('Ymdhms') . "." . $file->getClientOriginalExtension();
+                $file->storeAs('employees', $user_file);
+            }
+        }
         Employee::create([
 
             'name'=>$request->name,
             'designation'=>$request->designation,
             'Department'=>$request->department,
+            'image'=>$user_file,
             'password'=>$request->password
 
         ]);
