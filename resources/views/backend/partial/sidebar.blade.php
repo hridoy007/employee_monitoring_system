@@ -46,7 +46,7 @@
             </li>
 
 
-            <li><a class="has-arrow" href="('report')" aria-expanded="false"><i
+            <li><a class="has-arrow" href="{{route('report.view')}}" aria-expanded="false"><i
                         class="icon icon-globe"></i><span class="nav-text">Report</span></a>
 
             </li>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\ReportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\EmployeeController;
@@ -62,6 +64,14 @@ Route::get('/attendance/delete/{id}',[AttendanceController::class,'attendanceDel
 Route::get('Leave',[LeaveController::class,'leave'])->name('leave.view');
 Route::post('/leave/info',[LeaveController::class,'leaveInfo'])->name('leave.create');
 Route::get('/leave/delete/{id}',[LeaveController::class,'leaveDelete'])->name('leave.delete');
+
+//report
+Route::get('Report',[ReportController::class,'report'])->name('report.view');
+Route::post('/report/info',[ReportController::class,'reportInfo'])->name('report.create');
+Route::get('/report/delete/{id}',[ReportController::class,'reportDelete'])->name('report.delete');
+
+//loginPage
+Route::get('Admin',[AdminController::class,'admin'])->name('admin.page');
 
 
 
