@@ -33,7 +33,7 @@ class LoginController extends Controller
                      'email'=>$request->email,
                      'image'=>$user_file,
 
-                     'password'=>$request->password,
+                     'password'=>bcrypt($request->password),
 
     ]);
 

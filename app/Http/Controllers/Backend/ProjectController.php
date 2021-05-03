@@ -22,7 +22,8 @@ class ProjectController extends Controller
             'project_name'=>$request->projectName,
             'dept_name'=>$request->deptName,
             'deadline'=>$request->date,
-            'project_code'=>$request->projectCode
+            'project_code'=>$request->projectCode,
+            'status'=>$request->projectStatus
 
         ]);
 

@@ -2,6 +2,15 @@
     <div class="quixnav-scroll">
         <ul class="metismenu" id="menu">
             <li class="nav-label first">Main Menu</li>
+
+            <li><a class="has-arrow" href="Dashboard" aria-expanded="false"><i
+                        class=""></i><span class="nav-text">Dashboard</span></a>
+
+
+            </li>
+
+
+
             <li><a class="has-arrow" href="{{route('admin.view')}}" aria-expanded="false"><i
                         class="icon icon-single-04"></i><span class="nav-text">Admin</span></a>
 
@@ -10,17 +19,17 @@
 
 
             <li><a class="has-arrow" href="{{route('employee.view')}}" aria-expanded="false"><i
-                        class="icon icon-app-store"></i><span class="nav-text">Employee</span></a>
+                        class="icon icon-single-04"></i><span class="nav-text">Employee</span></a>
 
             </li>
             <li><a class="has-arrow" href="{{route('department.view')}}" aria-expanded="false"><i
-                        class="icon icon-chart-bar-33"></i><span class="nav-text">Department</span></a>
+                        class="icon icon-app-store"></i><span class="nav-text">Department</span></a>
 
 
             </li>
 
             <li><a class="has-arrow" href="{{route('project.view')}}" aria-expanded="false"><i
-                        class="icon icon-world-2"></i><span class="nav-text">Project</span></a>
+                        class="icon icon-chart-bar-33"></i><span class="nav-text">Project</span></a>
 
 
             </li>
@@ -35,21 +44,23 @@
 
 
             <li><a class="has-arrow" href="{{route('attendance')}}" aria-expanded="false"><i
-                        class="icon icon-world-2"></i><span class="nav-text">Attendance</span></a>
+                        class="icon icon-single-04"></i><span class="nav-text">Attendance</span></a>
 
             </li>
 
 
             <li><a class="has-arrow" href="{{route('leave.view')}}" aria-expanded="false"><i
-                        class="icon icon-globe"></i><span class="nav-text">Leave</span></a>
+                        class="icon icon-single-04"></i><span class="nav-text">Leave</span></a>
 
             </li>
 
 
             <li><a class="has-arrow" href="{{route('report.view')}}" aria-expanded="false"><i
-                        class="icon icon-globe"></i><span class="nav-text">Report</span></a>
+                        class="icon icon-world-2"></i><span class="nav-text">Report</span></a>
 
             </li>
+
+
 
 
 

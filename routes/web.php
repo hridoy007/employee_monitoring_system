@@ -23,56 +23,66 @@ use App\Http\Controllers\Backend\LeaveController;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+
+//loginPage
+Route::get('Admin', [AdminController::class, 'admin'])->name('admin.page');
+Route::post('/admin/validate', [AdminController::class, 'adminValidate'])->name('admin.validate');
+
+
+
+
+Route::group(['middleware'=>'auth'],function () {
+
+
+    Route::get('/', function () {
+        return view('main');
+    });
 
 //admin
-Route::get('/Login',[LoginController::class,'login'])->name('admin.view');
-Route::post('/admin/create',[LoginController::class,'loginCreate'])->name('admin.create');
-Route::get('/admin/delete/{id}',[LoginController::class,'adminDelete'])->name('admin.delete');
+    Route::get('/Login', [LoginController::class, 'login'])->name('admin.view');
+    Route::post('/admin/create', [LoginController::class, 'loginCreate'])->name('admin.create');
+    Route::get('/admin/delete/{id}', [LoginController::class, 'adminDelete'])->name('admin.delete');
 
 //employee
-Route::get('/Employee',[EmployeeController::class,'employee'])->name('employee.view');
-Route::post('/employee/details',[EmployeeController::class,'employeeDetails'])->name('employee.list');
-Route::get('/employee/delete/{id}',[EmployeeController::class,'employeeDelete'])->name('employee.delete');
+    Route::get('/Employee', [EmployeeController::class, 'employee'])->name('employee.view');
+    Route::post('/employee/details', [EmployeeController::class, 'employeeDetails'])->name('employee.list');
+    Route::get('/employee/delete/{id}', [EmployeeController::class, 'employeeDelete'])->name('employee.delete');
 
 //department
-Route::get('/Department',[DepartmentController::class,'department'])->name('department.view');
-Route::post('/department/info',[DepartmentController::class,'departmentInfo'])->name('department.create');
-Route::get('/department/delete/{id}',[DepartmentController::class,'departmentDelete'])->name('department.delete');
+    Route::get('/Department', [DepartmentController::class, 'department'])->name('department.view');
+    Route::post('/department/info', [DepartmentController::class, 'departmentInfo'])->name('department.create');
+    Route::get('/department/delete/{id}', [DepartmentController::class, 'departmentDelete'])->name('department.delete');
 
 
 //project
-Route::get('/Project',[ProjectController::class,'project'])->name('project.view');
-Route::post('/project/details',[ProjectController::class,'projectDetails'])->name('project.create');
-Route::get('/project/delete/{id}',[ProjectController::class,'projectDelete'])->name('project.delete');
+    Route::get('/Project', [ProjectController::class, 'project'])->name('project.view');
+    Route::post('/project/details', [ProjectController::class, 'projectDetails'])->name('project.create');
+    Route::get('/project/delete/{id}', [ProjectController::class, 'projectDelete'])->name('project.delete');
 
 
 //projectteam
-Route::get('/Projectteam',[ProjectteamController::class,'projectteam'])->name ('projectteam');
-Route::post('/projectTeam/Info',[ProjectteamController::class,'projectteamInfo'])->name('projectteam.details');
-Route::get('/projectteam/delete/{id}',[ProjectteamController::class,'projectteamDelete'])->name('projectteam.delete');
+    Route::get('/Projectteam', [ProjectteamController::class, 'projectteam'])->name('projectteam');
+    Route::post('/projectTeam/Info', [ProjectteamController::class, 'projectteamInfo'])->name('projectteam.details');
+    Route::get('/projectteam/delete/{id}', [ProjectteamController::class, 'projectteamDelete'])->name('projectteam.delete');
 
 
 //attendance
-Route::get('Attendance',[AttendanceController::class,'attendance'])->name('attendance');
-Route::post('/attendance/Info',[AttendanceController::class,'attendanceInfo'])->name('attendance.create');
-Route::get('/attendance/delete/{id}',[AttendanceController::class,'attendanceDelete'])->name('attendance.delete');
+    Route::get('Attendance', [AttendanceController::class, 'attendance'])->name('attendance');
+    Route::post('/attendance/Info', [AttendanceController::class, 'attendanceInfo'])->name('attendance.create');
+    Route::get('/attendance/delete/{id}', [AttendanceController::class, 'attendanceDelete'])->name('attendance.delete');
 
 //leave
-Route::get('Leave',[LeaveController::class,'leave'])->name('leave.view');
-Route::post('/leave/info',[LeaveController::class,'leaveInfo'])->name('leave.create');
-Route::get('/leave/delete/{id}',[LeaveController::class,'leaveDelete'])->name('leave.delete');
+    Route::get('Leave', [LeaveController::class, 'leave'])->name('leave.view');
+    Route::post('/leave/info', [LeaveController::class, 'leaveInfo'])->name('leave.create');
+    Route::get('/leave/delete/{id}', [LeaveController::class, 'leaveDelete'])->name('leave.delete');
 
 //report
-Route::get('Report',[ReportController::class,'report'])->name('report.view');
-Route::post('/report/info',[ReportController::class,'reportInfo'])->name('report.create');
-Route::get('/report/delete/{id}',[ReportController::class,'reportDelete'])->name('report.delete');
+    Route::get('Report', [ReportController::class, 'report'])->name('report.view');
+    Route::post('/report/info', [ReportController::class, 'reportInfo'])->name('report.create');
+    Route::get('/report/delete/{id}', [ReportController::class, 'reportDelete'])->name('report.delete');
 
-//loginPage
-Route::get('Admin',[AdminController::class,'admin'])->name('admin.page');
-
-
+//logout
+    Route::get('/admin/logout',[AdminController::class,'adminLogout'])->name('admin.logout');
 
 
+});

@@ -21,6 +21,8 @@
         <th scope="col">Project Name</th>
         <th scope="col">Department</th>
         <th scope="col">Deadline</th>
+        <th scope="col">Project Status</th>
+
         {{--        <th scope="col">Employee Photo</th>--}}
         <th scope="col">Actions</th>
 
@@ -37,6 +39,8 @@
                 <td>{{$data->project_name}}</td>
                 <td>{{$data->dept_name}}</td>
                 <td>{{$data->deadline}}</td>
+                <td>{{$data->status}}</td>
+
 
 
 
@@ -87,6 +91,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Project Status</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"></span>
+                                    <select name="projectStatus" id="">
+
+                                        <option selected>Select Status</option>
+                                        <option value="upcoming">Upcoming Project</option>
+                                        <option value="running">Running Project</option>
+                                        <option value="completed">Completed Project</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <div class="form-group">
                             <label for="username" class="cols-sm-2 control-label">Deadline</label>
                             <div class="cols-sm-10">

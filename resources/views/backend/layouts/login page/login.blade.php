@@ -33,10 +33,25 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form class="login100-form validate-form">
+            <form action="{{route('admin.validate')}}" method="post" class="login100-form validate-form">
+                @csrf
 <span class="login100-form-title p-b-26">
 Employee Monitoring System
 </span>
+
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{$error}}</div>
+                    @endforeach
+                @endif
+
+
+                @if(session()->has('success'))
+
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
                 <span class="login100-form-title p-b-48">
 <i class="zmdi zmdi-font"></i>
 </span>
@@ -48,13 +63,13 @@ Employee Monitoring System
 <span class="btn-show-pass">
 <i class="zmdi zmdi-eye"></i>
 </span>
-                    <input class="input100" type="password" name="pass">
+                    <input class="input100" type="password" name="password">
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn">
+                        <button type="submit" class="login100-form-btn">
                             Login
                         </button>
                     </div>
