@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\ReportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\LoginController;
@@ -22,7 +23,8 @@ use App\Http\Controllers\Backend\LeaveController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//dashboard
+Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard.view');
 
 //loginPage
 Route::get('Admin', [AdminController::class, 'admin'])->name('admin.page');
@@ -69,6 +71,7 @@ Route::group(['middleware'=>'auth'],function () {
 //attendance
     Route::get('Attendance', [AttendanceController::class, 'attendance'])->name('attendance');
     Route::post('/attendance/Info', [AttendanceController::class, 'attendanceInfo'])->name('attendance.create');
+    Route::put('/attendance/Info/update/{id}', [AttendanceController::class, 'attendanceInfoUpdate'])->name('attendance.update.create');
     Route::get('/attendance/delete/{id}', [AttendanceController::class, 'attendanceDelete'])->name('attendance.delete');
 
 //leave
@@ -83,6 +86,10 @@ Route::group(['middleware'=>'auth'],function () {
 
 //logout
     Route::get('/admin/logout',[AdminController::class,'adminLogout'])->name('admin.logout');
+
+
+ //calender
+    Route::get('/attendance/record',[AttendanceController::class,'attendanceRecord'])->name('attendance.record');
 
 
 });

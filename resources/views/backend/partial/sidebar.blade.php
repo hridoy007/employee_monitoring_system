@@ -3,8 +3,8 @@
         <ul class="metismenu" id="menu">
             <li class="nav-label first">Main Menu</li>
 
-            <li><a class="has-arrow" href="Dashboard" aria-expanded="false"><i
-                        class=""></i><span class="nav-text">Dashboard</span></a>
+            <li><a class="has-arrow" href="{{route('dashboard.view')}}" aria-expanded="false"><i
+                        class="icon icon-world-2"></i><span class="nav-text">Dashboard</span></a>
 
 
             </li>
