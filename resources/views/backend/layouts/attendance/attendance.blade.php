@@ -41,7 +41,7 @@
 
 
                 <td>
-                    <a class="btn btn-success" href="">View</a>
+                    <a class="btn btn-success" href="{{route('attendance.update.create',$data->id)}}">Check Out</a>
                     <a class="btn btn-danger" href="{{route('attendance.delete',$data->id)}}">Delete</a>
                     <a class="btn btn-info" href="">Edit</a>
 

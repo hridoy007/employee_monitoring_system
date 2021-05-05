@@ -18,10 +18,10 @@
         <thead>
 
         <th scope="col">ID</th>
-        <th scope="col">Leave Time</th>
-        <th scope="col">Employee Name</th>
-        <th scope="col">Department</th>
-        <th scope="col">Actions</th>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Total Leave</th>
+        <th scope="col">Leave Taken</th>
+        <th scope="col">Leave Available</th>
 
 
 
@@ -71,34 +71,41 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="name" class="cols-sm-2 control-label">Leave Time</label>
+                            <label for="name" class="cols-sm-2 control-label">Total Leave </label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="time" class="form-control" name="time" id="Time" placeholder="Time" />
+                                    <input type="time" class="form-control" name="totalLeave" id="Text" placeholder="Time" />
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="username" class="cols-sm-2 control-label">Employee Name</label>
+                            <label for="username" class="cols-sm-2 control-label">Leave Taken</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="employeeName" id="Name" placeholder="Name" />
+                                    <input type="text" class="form-control" name="leaveTaken" id="Text" placeholder="Name" />
                                 </div>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Department</label>
+                            <label for="username" class="cols-sm-2 control-label"></label>
                             <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"></span>
+                                    <select name="ReasonofLeave" id="">
+
+                                        <option value="casual_leave">Casual Leave</option>
+                                        <option value="sick_leave">Sick Leave</option>
+                                        <option value="manual_leave">Manual Leave</option>
+
+                                    </select>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="input-group">
-                            <span class="input-group-addon"></span>
-                            <input type="text" class="form-control" name="deptName" id="Name" placeholder="Department" />
-                        </div>
 
                         <br>
 

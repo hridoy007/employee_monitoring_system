@@ -71,7 +71,7 @@ Route::group(['middleware'=>'auth'],function () {
 //attendance
     Route::get('Attendance', [AttendanceController::class, 'attendance'])->name('attendance');
     Route::post('/attendance/Info', [AttendanceController::class, 'attendanceInfo'])->name('attendance.create');
-    Route::put('/attendance/Info/update/{id}', [AttendanceController::class, 'attendanceInfoUpdate'])->name('attendance.update.create');
+    Route::get('/attendance/Info/update/{id}', [AttendanceController::class, 'attendanceInfoUpdate'])->name('attendance.update.create');
     Route::get('/attendance/delete/{id}', [AttendanceController::class, 'attendanceDelete'])->name('attendance.delete');
 
 //leave
