@@ -20,6 +20,7 @@
 </div>
 </form>
 </center>
+
 {{--<form class="form-horizontal" method="post" action="{{route('attendance.update.create',$checkin->id)}}">--}}
 {{--    @method('PUT')--}}
 {{--    @csrf--}}

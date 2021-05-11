@@ -20,10 +20,11 @@ class LeaveController extends Controller
 
         Leave::create([
 //left side is database column name and right side is form name
-
-            'leave_time' => $request->time,
-            'name' => $request->employeeName,
-            'department' => $request->deptName,
+            'employee_id'=>auth()->user()->id,
+            'total_leave' => $request->totalLeave,
+            'leave_taken' => $request->leaveTaken,
+            'leave_available' => $request->leaveAvailable,
+            'leave_reason' => $request->reasonofLeave,
 
 
 

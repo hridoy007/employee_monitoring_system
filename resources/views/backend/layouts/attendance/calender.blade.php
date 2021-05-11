@@ -66,6 +66,8 @@
                 {{$data->name}}
                 </th>
 
+{{--                <td>{{$data->"1"}}</td>--}}
+
             </tr>
 
   @endforeach

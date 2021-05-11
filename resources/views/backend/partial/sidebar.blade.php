@@ -48,6 +48,11 @@
 
             </li>
 
+            <li><a class="has-arrow" href="{{route('attendance.record')}}" aria-expanded="false"><i
+                        class="icon icon-single-04"></i><span class="nav-text">Attendance Record</span></a>
+
+            </li>
+
 
             <li><a class="has-arrow" href="{{route('leave.view')}}" aria-expanded="false"><i
                         class="icon icon-single-04"></i><span class="nav-text">Leave</span></a>
@@ -55,10 +60,7 @@
             </li>
 
 
-            <li><a class="has-arrow" href="{{route('report.view')}}" aria-expanded="false"><i
-                        class="icon icon-world-2"></i><span class="nav-text">Report</span></a>
 
-            </li>
 
 
 

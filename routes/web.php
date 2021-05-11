@@ -80,9 +80,9 @@ Route::group(['middleware'=>'auth'],function () {
     Route::get('/leave/delete/{id}', [LeaveController::class, 'leaveDelete'])->name('leave.delete');
 
 //report
-    Route::get('Report', [ReportController::class, 'report'])->name('report.view');
-    Route::post('/report/info', [ReportController::class, 'reportInfo'])->name('report.create');
-    Route::get('/report/delete/{id}', [ReportController::class, 'reportDelete'])->name('report.delete');
+//    Route::get('Report', [ReportController::class, 'report'])->name('report.view');
+//    Route::post('/report/info', [ReportController::class, 'reportInfo'])->name('report.create');
+//    Route::get('/report/delete/{id}', [ReportController::class, 'reportDelete'])->name('report.delete');
 
 //logout
     Route::get('/admin/logout',[AdminController::class,'adminLogout'])->name('admin.logout');

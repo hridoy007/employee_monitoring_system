@@ -22,6 +22,8 @@
         <th scope="col">Total Leave</th>
         <th scope="col">Leave Taken</th>
         <th scope="col">Leave Available</th>
+        <th scope="col">Leave Reason</th>
+        <th scope="col">Actions</th>
 
 
 
@@ -33,9 +35,12 @@
             <tr>
                 <th scope="row">{{$key+1}}</th>
 
-                <td>{{$data->leave_time}}</td>
-                <td>{{$data->name}}</td>
-                <td>{{$data->department}}</td>
+                <td>{{$data->employee_id}}</td>
+                <td>{{$data->total_leave}}</td>
+                <td>{{$data->leave_taken}}</td>
+                <td>{{$data->leave_available}}</td>
+                <td>{{$data->leave_reason}}</td>
+
 
 
 
@@ -75,7 +80,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="time" class="form-control" name="totalLeave" id="Text" placeholder="Time" />
+                                    <input type="text" class="form-control" name="totalLeave" id="Text" placeholder="" />
                                 </div>
                             </div>
                         </div>
@@ -85,7 +90,17 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="leaveTaken" id="Text" placeholder="Name" />
+                                    <input type="text" class="form-control" name="leaveTaken" id="Text" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Leave Available</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"></span>
+                                    <input type="text" class="form-control" name="leaveAvailable" id="Text" placeholder="" />
                                 </div>
                             </div>
                         </div>
@@ -95,10 +110,13 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <select name="ReasonofLeave" id="">
+                                    <select name="reasonofLeave" id="text">
 
-                                        <option value="casual_leave">Casual Leave</option>
-                                        <option value="sick_leave">Sick Leave</option>
+                                        <option selected disabled >Select Reason</option>
+{{--                                        <option value="casual_leave">Casual Leave</option>                                        <option value="casual_leave">Casual Leave</option>--}}
+
+                                       <option value="casual_leave">Casual Leave</option>
+                                       <option value="sick_leave">Sick Leave</option>
                                         <option value="manual_leave">Manual Leave</option>
 
                                     </select>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\Attendance;
 
 use App\Models\Backend\Employee;
+use App\Models\Backend\Record;
 use Illuminate\Http\Request;
 
 class AttendanceController extends Controller
@@ -32,6 +33,11 @@ class AttendanceController extends Controller
                 'check_in'=>date("h:i:sa"),
                 'date'=>date('Y-m-d'),
 
+            ]);
+
+            Record::create([
+               'name'=>auth()->user()->name,
+                '1'=>'present'
             ]);
 
 
@@ -72,7 +78,7 @@ class AttendanceController extends Controller
 
     public function attendanceRecord ()
     {
-        $attendanceRecord=Employee::all();
+        $attendanceRecord=Record::all();
         return view ('backend.layouts.attendance.calender',compact('attendanceRecord'));
     }
 
