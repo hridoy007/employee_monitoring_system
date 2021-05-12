@@ -78,7 +78,9 @@ class AttendanceController extends Controller
 
     public function attendanceRecord ()
     {
-        $attendanceRecord=Record::all();
+//        @dd(date('m'));
+        $attendanceRecord=Attendance::whereMonth('date',date('m'))->get();
+//        dd($attendanceRecord);
         return view ('backend.layouts.attendance.calender',compact('attendanceRecord'));
     }
 

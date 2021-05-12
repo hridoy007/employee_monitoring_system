@@ -61,10 +61,57 @@
 
 
 
-                <th>
+                <td>
 
-                {{$data->name}}
-                </th>
+                {{$data->employee_id}}
+                </td>
+                <td>
+
+                    {{date('d',strtotime($data->date))==1?'P':'A'}}
+                </td>
+                <td>
+
+                    {{date('d',strtotime($data->date))==2?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==3?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==4?'P':'A'}}
+                </td><td>
+
+{{--                    {{date('d',strtotime($data->date))==5?'P' :'A'}}--}}
+                    @if(date('d',strtotime($data->date))==5)
+                        <span style="background-color: green">P</span>
+                    @else
+                        <span style="background-color: red">A</span>
+                    @endif
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==6?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==7?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==8?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==9?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==10?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==11?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==12?'P':'A'}}
+                </td><td>
+
+                    {{date('d',strtotime($data->date))==13?'P':'A'}}
+                </td>
+
 
 {{--                <td>{{$data->"1"}}</td>--}}
 
