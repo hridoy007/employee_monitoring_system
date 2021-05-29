@@ -34,6 +34,7 @@ class EmployeeController extends Controller
             'name'=>$request->name,
             'designation'=>$request->designation,
             'Department'=>$request->department,
+            'Email'=>$request->Email,
             'image'=>$user_file,
             'password'=>$request->password
 

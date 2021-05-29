@@ -22,7 +22,7 @@
         <th scope="col">Employee Image</th>
         <th scope="col">Employee Name</th>
         <th scope="col">Designation</th>
-        <th scope="col">Contact</th>
+        <th scope="col">Email</th>
 {{--        <th scope="col">Employee Photo</th>--}}
         <th scope="col">Actions</th>
 
@@ -101,6 +101,16 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
                                     <input type="number" class="form-control" name="submit" id="ID" placeholder="ID" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Email</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"></span>
+                                    <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" />
                                 </div>
                             </div>
                         </div>

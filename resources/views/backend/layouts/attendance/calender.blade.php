@@ -67,18 +67,26 @@
                 </td>
                 <td>
 
-                    {{date('d',strtotime($data->date))==1?'P':'A'}}
+                    @if(date('d',strtotime($data->date))==5)
+                        <span style="background-color: green">P</span>
+                    @else
+                        <span style="background-color: red">A</span>
+                    @endif
                 </td>
                 <td>
 
                     {{date('d',strtotime($data->date))==2?'P':'A'}}
-                </td><td>
+                </td>
+                <td>
 
                     {{date('d',strtotime($data->date))==3?'P':'A'}}
-                </td><td>
+                </td>
+                <td>
 
                     {{date('d',strtotime($data->date))==4?'P':'A'}}
-                </td><td>
+                </td>
+
+                <td>
 
 {{--                    {{date('d',strtotime($data->date))==5?'P' :'A'}}--}}
                     @if(date('d',strtotime($data->date))==5)
@@ -86,31 +94,155 @@
                     @else
                         <span style="background-color: red">A</span>
                     @endif
-                </td><td>
+                </td>
+
+                <td>
 
                     {{date('d',strtotime($data->date))==6?'P':'A'}}
-                </td><td>
+                </td>
+
+                <td>
 
                     {{date('d',strtotime($data->date))==7?'P':'A'}}
                 </td><td>
 
                     {{date('d',strtotime($data->date))==8?'P':'A'}}
-                </td><td>
+                </td>
+
+                <td>
 
                     {{date('d',strtotime($data->date))==9?'P':'A'}}
-                </td><td>
+                </td>
+
+                <td>
 
                     {{date('d',strtotime($data->date))==10?'P':'A'}}
-                </td><td>
+                </td>
+
+                <td>
 
                     {{date('d',strtotime($data->date))==11?'P':'A'}}
-                </td><td>
+                </td>
+
+                <td>
 
                     {{date('d',strtotime($data->date))==12?'P':'A'}}
-                </td><td>
+                </td>
+
+                <td>
 
                     {{date('d',strtotime($data->date))==13?'P':'A'}}
                 </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==14?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==15?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==16?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==17?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==18?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==19?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==20?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==21?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==22?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==23?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==24?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==25?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==26?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==27?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==28?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==29?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==30?'P':'A'}}
+                </td>
+
+
+                <td>
+
+                    {{date('d',strtotime($data->date))==31?'P':'A'}}
+                </td>
+
+
 
 
 {{--                <td>{{$data->"1"}}</td>--}}
