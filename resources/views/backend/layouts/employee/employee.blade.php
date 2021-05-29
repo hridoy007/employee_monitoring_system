@@ -5,7 +5,9 @@
     <!-- Button trigger modal -->
     <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Add Employee
-        </button></center>
+        </button><a style="margin-left: 20px" href="{{route('generate.report')}}"  class="btn btn-primary"  >
+            Generate Report
+        </a></center>
 
 
     @if(session()->has('success'))
@@ -22,8 +24,8 @@
         <th scope="col">Employee Image</th>
         <th scope="col">Employee Name</th>
         <th scope="col">Designation</th>
+        <th scope="col">Department</th>
         <th scope="col">Email</th>
-{{--        <th scope="col">Employee Photo</th>--}}
         <th scope="col">Actions</th>
 
 
@@ -44,8 +46,8 @@
 
                 <td>{{$data->name}}</td>
                 <td>{{$data->designation}}</td>
-                <td>{{$data->department}}</td>
-                <td>{{$data->contact}}</td>
+                <td>{{$data->Department}}</td>
+                <td>{{$data->Email}}</td>
 
 
                 <td>
@@ -92,15 +94,6 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
                                     <input type="text" class="form-control" name="designation" id="Designation" placeholder="Role" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="username" class="cols-sm-2 control-label">ID</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"></span>
-                                    <input type="number" class="form-control" name="submit" id="ID" placeholder="ID" />
                                 </div>
                             </div>
                         </div>

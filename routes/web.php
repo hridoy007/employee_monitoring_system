@@ -90,6 +90,7 @@ Route::group(['middleware'=>'auth'],function () {
 
  //calender
     Route::get('/attendance/record',[AttendanceController::class,'attendanceRecord'])->name('attendance.record');
-
+//generate report
+    Route::get('/generate/report',[ReportController::class,'generateReport'])->name('generate.report');
 
 });

@@ -48,6 +48,7 @@
         <th scope="col">28</th>
         <th scope="col">29</th>
         <th scope="col">30</th>
+        <th scope="col">31</th>
 
 
 
@@ -65,6 +66,7 @@
 
                 {{$data->employee_id}}
                 </td>
+
                 <td>
 
                     @if(date('d',strtotime($data->date))==5)
@@ -73,9 +75,14 @@
                         <span style="background-color: red">A</span>
                     @endif
                 </td>
+
                 <td>
 
-                    {{date('d',strtotime($data->date))==2?'P':'A'}}
+                    @if(date('d',strtotime($data->date))==5)
+                        <span style="background-color: green">P</span>
+                    @else
+                        <span style="background-color: red">A</span>
+                    @endif
                 </td>
                 <td>
 
