@@ -20,13 +20,13 @@
     <table class="table table_bordered table-hover">
         <thead>
 
-        <th scope="col">ID</th>
-        <th scope="col">Employee Image</th>
-        <th scope="col">Employee Name</th>
-        <th scope="col">Designation</th>
-        <th scope="col">Department</th>
-        <th scope="col">Email</th>
-        <th scope="col">Actions</th>
+        <th style="color: #1a202c" scope="col">ID</th>
+        <th style="color: #1a202c" scope="col">Employee Image</th>
+        <th style="color: #1a202c" scope="col">Employee Name</th>
+        <th style="color: #1a202c" scope="col">Designation</th>
+        <th style="color: #1a202c" scope="col">Department</th>
+        <th style="color: #1a202c" scope="col">Email</th>
+        <th style="color: #1a202c" scope="col">Actions</th>
 
 
 
@@ -40,20 +40,20 @@
 
                 <td>
 
-                    <img style="width: 100px;" src="{{url('/images/employees/',$data->image)}}" alt="Image Not Found">
+                    <img style="width: 100px;" src="{{url('/images/admins/',$data->image)}}" alt="Image Not Found">
 
                 </td>
 
-                <td>{{$data->name}}</td>
-                <td>{{$data->designation}}</td>
-                <td>{{$data->Department}}</td>
-                <td>{{$data->Email}}</td>
+                <td style="color: #1a202c">{{$data->name}}</td>
+                <td style="color: #1a202c">{{$data->designation}}</td>
+                <td style="color: #1a202c">{{$data->Department}}</td>
+                <td style="color: #1a202c">{{$data->email}}</td>
 
 
                 <td>
                     <a class="btn btn-success" href="">View</a>
                     <a class="btn btn-danger" href="{{route('employee.delete',$data->id)}}">Delete</a>
-                    <a class="btn btn-info" href="">Edit</a>
+                    <a class="btn btn-info" href="{{route('employee.edit',$data->id)}}">Edit</a>
 
                 </td>
 
@@ -123,7 +123,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter Your Password" />
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Enter Your Password" />
                                 </div>
                             </div>
                         </div>

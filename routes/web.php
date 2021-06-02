@@ -40,6 +40,9 @@ Route::group(['middleware'=>'auth'],function () {
         return view('main');
     });
 
+    Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard.view');
+
+
 //admin
     Route::get('/Login', [LoginController::class, 'login'])->name('admin.view');
     Route::post('/admin/create', [LoginController::class, 'loginCreate'])->name('admin.create');
@@ -87,6 +90,8 @@ Route::group(['middleware'=>'auth'],function () {
     Route::get('Leave', [LeaveController::class, 'leave'])->name('leave.view');
     Route::post('/leave/info', [LeaveController::class, 'leaveInfo'])->name('leave.create');
     Route::get('/leave/delete/{id}', [LeaveController::class, 'leaveDelete'])->name('leave.delete');
+    Route::get('/leave/edit/{id}', [LeaveController::class, 'leaveEdit'])->name('leave.edit');
+    Route::put('/leave/update/{id}', [LeaveController::class, 'leaveUpdate'])->name('leave.update');
 
 //report
 //    Route::get('Report', [ReportController::class, 'report'])->name('report.view');

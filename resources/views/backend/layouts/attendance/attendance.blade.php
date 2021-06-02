@@ -15,12 +15,12 @@
     <table class="table table_bordered table-hover">
         <thead>
 
-        <th scope="col">ID</th>
-        <th scope="col">Employee ID</th>
-        <th scope="col">Check In</th>
-        <th scope="col">Check Out</th>
-        <th scope="col">Date</th>
-        <th scope="col">Actions</th>
+        <th style="color: black" scope="col">ID</th>
+        <th style="color: black" scope="col">Employee ID</th>
+        <th style="color: black" scope="col">Check In</th>
+        <th style="color: black" scope="col">Check Out</th>
+        <th style="color: black" scope="col">Date</th>
+        <th style="color: black" scope="col">Actions</th>
 
 
 
@@ -32,10 +32,10 @@
             <tr>
                 <th scope="row">{{$key+1}}</th>
 
-                <td>{{$data->employee_id}}</td>
-                <td>{{$data->check_in}}</td>
-                <td>{{$data->check_out}}</td>
-                <td>{{$data->date}}</td>
+                <td style="color: blue">{{$data->employee_id}}</td>
+                <td style="color: olive">{{$data->check_in}}</td>
+                <td style="color: firebrick">{{$data->check_out}}</td>
+                <td style="color: indigo">{{$data->date}}</td>
 
 
 

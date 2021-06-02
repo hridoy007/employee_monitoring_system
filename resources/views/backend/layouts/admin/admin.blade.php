@@ -4,7 +4,7 @@
 
     <!-- Button trigger modal -->
    <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Admin Login
+        Admin create
     </button></center>
 
     @if(session()->has('success'))
@@ -91,6 +91,17 @@
                                 </div>
                             </div>
                         </div>
+
+                        <br>
+                        <select name="role" id="">
+
+                            <option value="" disabled selected>Select Role Of the Admin</option>
+                            <option value="admin">Admin</option>
+                            <option value="employee">Employee</option>
+
+                        </select>
+                        <br>
+                        <br>
 
 
 

@@ -45,7 +45,7 @@ class ProjectController extends Controller
         return view('backend.layouts.project.projectUpdate', compact('project'));
     }
 
-    public function employeeUpdate(Request$request,$id)
+    public function projectUpdate(Request$request,$id)
     {
 
         Project::find($id)->update([

@@ -18,7 +18,11 @@ class CreateAdminsTable extends Migration
             $table->string('email');
             $table->id();
             $table->string('password');
+            $table->string('designation')->nullable();
+            $table->string('Department')->nullable();
             $table->text('image');
+            $table->string('role')->default('employee');
+
             $table->timestamps();
         });
     }

@@ -29,7 +29,7 @@ class AdminController extends Controller
 //        dd($credentials);
         if (Auth::guard('web')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('admin.view');
+            return redirect()->route('dashboard.view');
         }
         return back()->withErrors([
             'email' => 'Invalid Credentials.',

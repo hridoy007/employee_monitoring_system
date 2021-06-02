@@ -46,9 +46,10 @@
 
                 <td>
                     <a class="btn btn-success" href="">View</a>
+                    @if(auth()->user()->role=='admin')
                     <a class="btn btn-danger" href="{{route('project.delete',$data->id)}}">Delete</a>
-                    <a class="btn btn-info" href="">Edit</a>
-
+                    <a class="btn btn-info" href="{{route('project.edit',$data->id)}}">Edit</a>
+                    @endif
                 </td>
 
             </tr>

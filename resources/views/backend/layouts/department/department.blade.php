@@ -41,7 +41,7 @@
                 <td>
                     <a class="btn btn-success" href="">View</a>
                     <a class="btn btn-danger" href="{{route('department.delete',$data->id)}}">Delete</a>
-                    <a class="btn btn-info" href="">Edit</a>
+                    <a class="btn btn-info" href="{{route('department.edit',$data->id)}}">Edit</a>
 
                 </td>
 

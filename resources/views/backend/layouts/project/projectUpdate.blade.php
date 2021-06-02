@@ -2,76 +2,76 @@
 @section('page')
 
 
-    <!-- Button trigger modal -->
-    <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Project Details
-        </button></center>
+{{--    <!-- Button trigger modal -->--}}
+{{--    <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">--}}
+{{--            Project Details--}}
+{{--        </button></center>--}}
 
-    @if(session()->has('success'))
+{{--    @if(session()->has('success'))--}}
 
-        <div class="alert alert-success">
-            {{ session()->get('success') }}
-        </div>
-    @endif
+{{--        <div class="alert alert-success">--}}
+{{--            {{ session()->get('success') }}--}}
+{{--        </div>--}}
+{{--    @endif--}}
 
-    <table class="table table_bordered table-hover">
-        <thead>
+{{--    <table class="table table_bordered table-hover">--}}
+{{--        <thead>--}}
 
-        <th scope="col">ID</th>
-        <th scope="col">Project Name</th>
-        <th scope="col">Department</th>
-        <th scope="col">Deadline</th>
-        <th scope="col">Project Status</th>
+{{--        <th scope="col">ID</th>--}}
+{{--        <th scope="col">Project Name</th>--}}
+{{--        <th scope="col">Department</th>--}}
+{{--        <th scope="col">Deadline</th>--}}
+{{--        <th scope="col">Project Status</th>--}}
 
-        {{--        <th scope="col">Employee Photo</th>--}}
-        <th scope="col">Actions</th>
-
-
-
-        </thead>
-        <tbody>
-
-        @foreach($project as $key=>$data)
-
-            <tr>
-                <th scope="row">{{$key+1}}</th>
-
-                <td>{{$data->project_name}}</td>
-                <td>{{$data->dept_name}}</td>
-                <td>{{$data->deadline}}</td>
-                <td>{{$data->status}}</td>
+{{--        --}}{{--        <th scope="col">Employee Photo</th>--}}
+{{--        <th scope="col">Actions</th>--}}
 
 
 
+{{--        </thead>--}}
+{{--        <tbody>--}}
 
-                <td>
-                    <a class="btn btn-success" href="">View</a>
-                    <a class="btn btn-danger" href="{{route('project.delete',$data->id)}}">Delete</a>
-                    <a class="btn btn-danger" href="{{route('project.edit',$data->id)}}">Edit</a>
+{{--        @foreach($project as $key=>$data)--}}
+
+{{--            <tr>--}}
+{{--                <th scope="row">{{$key+1}}</th>--}}
+
+{{--                <td>{{$data->project_name}}</td>--}}
+{{--                <td>{{$data->dept_name}}</td>--}}
+{{--                <td>{{$data->deadline}}</td>--}}
+{{--                <td>{{$data->status}}</td>--}}
 
 
-                </td>
 
-            </tr>
 
-        @endforeach
-        </tbody>
-    </table><br>
+{{--                <td>--}}
+{{--                    <a class="btn btn-success" href="">View</a>--}}
+{{--                    <a class="btn btn-danger" href="{{route('project.delete',$data->id)}}">Delete</a>--}}
+{{--                    <a class="btn btn-danger" href="{{route('project.edit',$data->id)}}">Edit</a>--}}
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Project</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
+
+{{--                </td>--}}
+
+{{--            </tr>--}}
+
+{{--        @endforeach--}}
+{{--        </tbody>--}}
+{{--    </table><br>--}}
+
+{{--    <!-- Modal -->--}}
+{{--    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
+{{--        <div class="modal-dialog" role="document">--}}
+{{--            <div class="modal-content">--}}
+{{--                <div class="modal-header">--}}
+{{--                    <h5 class="modal-title" id="exampleModalLabel">Project</h5>--}}
+{{--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                        <span aria-hidden="true">&times;</span>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--                <div class="modal-body">--}}
                     {{--form start--}}
 
-                    <form class="form-horizontal" method="post" action="{{route('project.update')}}">
+                    <form class="form-horizontal" method="post" action="{{route('project.update',$project->id)}}">
                         @csrf
                         @method('PUT')
 

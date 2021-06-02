@@ -13,7 +13,7 @@ class EmployeeController extends Controller
 {
     public function employee()
     {
-        $employee = Employee::all();
+        $employee = Admin::where('role','employee')->get();
         return view('backend.layouts.employee.employee', compact('employee'));
     }
 
@@ -27,17 +27,17 @@ class EmployeeController extends Controller
             if ($file->isValid()) {
 
                 $user_file = date('Ymdhms') . "." . $file->getClientOriginalExtension();
-                $file->storeAs('employees', $user_file);
+                $file->storeAs('admins', $user_file);
             }
         }
-        Employee::create([
+        Admin::create([
 
             'name' => $request->name,
             'designation' => $request->designation,
-            'Department' => $request->department,
-            'Email' => $request->Email,
+            'department' => $request->department,
+            'email' => $request->Email,
             'image' => $user_file,
-            'password' => $request->password
+            'password' => bcrypt($request->password)
 
         ]);
 
@@ -48,7 +48,7 @@ class EmployeeController extends Controller
 
     public function employeeDelete($id)
     {
-        $employee = Employee::find($id);
+        $employee = Admin::find($id);
         $employee->delete();
         return redirect()->route('employee.view')->with('success', 'Employee Removed Successfully');
     }
@@ -56,14 +56,14 @@ class EmployeeController extends Controller
 
     public function employeeEdit($id)
     {
-        $employee = Employee::find($id);
+        $employee = Admin::find($id);
         return view('backend.layouts.employee.employeeUpdate', compact('employee'));
     }
 
     public function employeeUpdate(Request$request,$id)
     {
 
-        Employee::find($id)->update([
+        Admin::find($id)->update([
 
             'name' => $request->name,
             'designation' => $request->designation,

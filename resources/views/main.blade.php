@@ -36,7 +36,7 @@
         Nav header start
     ***********************************-->
     <div class="nav-header">
-        <div class="text-uppercase"> <strong class="text-primary"> <center><h3 style="color:white;">Employee Monitoring System</h3></center></strong></div>
+        <div class="text-uppercase"> <strong class="text-primary"> <center><h3 style="color: white" ;">Employee Monitoring System</h3></center></strong></div>
     </div>
 
         <div class="nav-control">
