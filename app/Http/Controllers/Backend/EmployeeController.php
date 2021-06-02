@@ -13,9 +13,10 @@ class EmployeeController extends Controller
 {
     public function employee()
     {
-        $employee=Employee::all();
-        return view ('backend.layouts.employee.employee',compact('employee'));
+        $employee = Employee::all();
+        return view('backend.layouts.employee.employee', compact('employee'));
     }
+
     public function employeeDetails(Request $request)
     {
         $user_file = "";
@@ -31,25 +32,46 @@ class EmployeeController extends Controller
         }
         Employee::create([
 
-            'name'=>$request->name,
-            'designation'=>$request->designation,
-            'Department'=>$request->department,
-            'Email'=>$request->Email,
-            'image'=>$user_file,
-            'password'=>$request->password
+            'name' => $request->name,
+            'designation' => $request->designation,
+            'Department' => $request->department,
+            'Email' => $request->Email,
+            'image' => $user_file,
+            'password' => $request->password
 
         ]);
 
-        return redirect()->route('employee.view')->with('success','Employee Added Successfully');
-
+        return redirect()->route('employee.view')->with('success', 'Employee Added Successfully');
 
 
     }
 
-    public function employeeDelete ($id)
+    public function employeeDelete($id)
     {
-        $employee=Employee::find($id);
+        $employee = Employee::find($id);
         $employee->delete();
-        return redirect()->route('employee.view')->with('success','Employee Removed Successfully');
+        return redirect()->route('employee.view')->with('success', 'Employee Removed Successfully');
+    }
+
+
+    public function employeeEdit($id)
+    {
+        $employee = Employee::find($id);
+        return view('backend.layouts.employee.employeeUpdate', compact('employee'));
+    }
+
+    public function employeeUpdate(Request$request,$id)
+    {
+
+        Employee::find($id)->update([
+
+            'name' => $request->name,
+            'designation' => $request->designation,
+            'Department' => $request->department,
+            'Email' => $request->Email,
+            'password' => $request->password
+
+        ]);
+        return redirect()->route('employee.view')->with('success','Employee Updated Successfully');
     }
 }

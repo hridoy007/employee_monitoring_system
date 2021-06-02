@@ -49,23 +49,32 @@ Route::group(['middleware'=>'auth'],function () {
     Route::get('/Employee', [EmployeeController::class, 'employee'])->name('employee.view');
     Route::post('/employee/details', [EmployeeController::class, 'employeeDetails'])->name('employee.list');
     Route::get('/employee/delete/{id}', [EmployeeController::class, 'employeeDelete'])->name('employee.delete');
+    Route::get('/employee/edit/{id}', [EmployeeController::class, 'employeeEdit'])->name('employee.edit');
+    Route::put('/employee/update/{id}', [EmployeeController::class, 'employeeUpdate'])->name('employee.update');
 
 //department
     Route::get('/Department', [DepartmentController::class, 'department'])->name('department.view');
     Route::post('/department/info', [DepartmentController::class, 'departmentInfo'])->name('department.create');
     Route::get('/department/delete/{id}', [DepartmentController::class, 'departmentDelete'])->name('department.delete');
+    Route::get('/department/edit/{id}', [DepartmentController::class, 'departmentEdit'])->name('department.edit');
+    Route::put('/department/update/{id}', [DepartmentController::class, 'departmentUpdate'])->name('department.Update');
+
 
 
 //project
     Route::get('/Project', [ProjectController::class, 'project'])->name('project.view');
     Route::post('/project/details', [ProjectController::class, 'projectDetails'])->name('project.create');
     Route::get('/project/delete/{id}', [ProjectController::class, 'projectDelete'])->name('project.delete');
+    Route::get('/project/edit/{id}', [ProjectController::class, 'projectEdit'])->name('project.edit');
+    Route::put('/project/update/{id}', [ProjectController::class, 'projectUpdate'])->name('project.update');
 
 
 //projectteam
     Route::get('/Projectteam', [ProjectteamController::class, 'projectteam'])->name('projectteam');
     Route::post('/projectTeam/Info', [ProjectteamController::class, 'projectteamInfo'])->name('projectteam.details');
     Route::get('/projectteam/delete/{id}', [ProjectteamController::class, 'projectteamDelete'])->name('projectteam.delete');
+    Route::get('/projectteam/edit/{id}', [ProjectteamController::class, 'projectteamEdit'])->name('projectteam.edit');
+    Route::put('/projectteam/update/{id}', [ProjectteamController::class, 'projectteamUpdate'])->name('projectteam.update');
 
 
 //attendance
