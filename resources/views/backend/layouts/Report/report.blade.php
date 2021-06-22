@@ -9,11 +9,33 @@
             {{ session()->get('success') }}
         </div>
     @endif
+    <form action="{{route('generate.report')}}" method="GET">
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row" style="padding: 2px 47px;">
+
+                    <div class="form-group col-md-4">
+                        <label for="from"> Date from:</label>
+                        <input value="{{$fromDate}}" id="from" type="date" class="form-control" name="from_date">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="to"> Date to:</label>
+                        <input value="{{$toDate}}" id="to" type="date" class="form-control" name="to_date">
+                    </div>
+                    <div style="padding: 31px 2px;" class="form-group col-md-4">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="button" onclick="printDiv()" class="btn btn-success">Print</button>
+
+                    </div>
+                </div>
+            </div>
 
 
-<center> <button type="button" onclick="printDiv()" class="btn btn-success" style="margin-bottom: 50px;margin-top: 50px">Print</button></center>
+        </div>
+    </form>
 
-    <div id="printArea" style="background-color: greenyellow" >
+    <div id="printArea" style="background-color: whitesmoke" >
         <table class="table table_bordered table-hover">
             <thead>
 
@@ -30,21 +52,21 @@
             </thead>
             <tbody>
 
-            @foreach($report as $key=>$data)
+            @foreach($allEmployee as $key=>$data)
 
                 <tr>
                     <th scope="row">{{$key+1}}</th>
 
                     <td>
 
-                        <img style="width:50px" src="{{url('/images/employees/',$data->image)}}" alt="Image Not Found">
+                        <img style="width:50px" src="{{url('/images/admins/',$data->image)}}" alt="Image Not Found">
 
                     </td>
 
                     <td>{{$data->name}}</td>
                     <td>{{$data->designation}}</td>
                     <td>{{$data->Department}}</td>
-                    <td>{{$data->Email}}</td>
+                    <td>{{$data->email}}</td>
 
 
 

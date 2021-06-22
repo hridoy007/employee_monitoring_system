@@ -19,7 +19,7 @@ class AdminTableSeeder extends Seeder
             'name'=>'Shahadat Hridoy',
             'email'=>'shhridoy25@gmail.com',
             'role'=>'admin',
-            'image'=>'image.jpg',
+            'image'=>'image.png',
 
 
             'password'=>bcrypt('123456'),

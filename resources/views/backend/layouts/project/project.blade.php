@@ -79,7 +79,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="projectName" id="name" placeholder="Name" />
+                                    <input type="text" style="color: #1a202c" class="form-control" name="projectName" id="name" placeholder="Name" />
                                 </div>
                             </div>
                         </div>
