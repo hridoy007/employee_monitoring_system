@@ -7,18 +7,27 @@ use App\Models\Backend\admin;
 use App\Models\Backend\Employee;
 
 
+use App\Models\Backend\Projectteam;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
     public function employee()
     {
-        $employee = Admin::where('role','employee')->get();
-        return view('backend.layouts.employee.employee', compact('employee'));
+        $teams=Projectteam::all();
+        $employee = Admin::with('employee')->where('role','employee')->get();
+        return view('backend.layouts.employee.employee', compact('employee','teams'));
     }
 
     public function employeeDetails(Request $request)
     {
+
+        $request->validate([
+
+            'email'=>'required|email|unique:admins'
+
+        ]);
+
         $user_file = "";
 
         if ($request->hasFile('employee_image')) {
@@ -35,7 +44,8 @@ class EmployeeController extends Controller
             'name' => $request->name,
             'designation' => $request->designation,
             'department' => $request->department,
-            'email' => $request->Email,
+            'team_id'=>$request->team,
+            'email' => $request->email,
             'image' => $user_file,
             'password' => bcrypt($request->password)
 
@@ -56,8 +66,11 @@ class EmployeeController extends Controller
 
     public function employeeEdit($id)
     {
+
+        $teams=Projectteam::all();
+
         $employee = Admin::find($id);
-        return view('backend.layouts.employee.employeeUpdate', compact('employee'));
+        return view('backend.layouts.employee.employeeUpdate', compact('employee','teams'));
     }
 
     public function employeeUpdate(Request$request,$id)
@@ -68,6 +81,7 @@ class EmployeeController extends Controller
             'name' => $request->name,
             'designation' => $request->designation,
             'Department' => $request->department,
+            'team_id'=>$request->team,
             'Email' => $request->Email,
             'password' => $request->password
 

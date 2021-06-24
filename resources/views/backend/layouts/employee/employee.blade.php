@@ -9,6 +9,12 @@
             Generate Report
         </a></center>
 
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <div class="alert alert-danger">{{$error}}</div>
+        @endforeach
+    @endif
+
 
     @if(session()->has('success'))
 
@@ -25,6 +31,7 @@
         <th style="color: #1a202c" scope="col">Employee Name</th>
         <th style="color: #1a202c" scope="col">Designation</th>
         <th style="color: #1a202c" scope="col">Department</th>
+        <th style="color: #1a202c" scope="col">Team</th>
         <th style="color: #1a202c" scope="col">Email</th>
         <th style="color: #1a202c" scope="col">Actions</th>
 
@@ -47,6 +54,7 @@
                 <td style="color: #1a202c">{{$data->name}}</td>
                 <td style="color: #1a202c">{{$data->designation}}</td>
                 <td style="color: #1a202c">{{$data->Department}}</td>
+                <td style="color: #1a202c">{{$data->team_id}}</td>
                 <td style="color: #1a202c">{{$data->email}}</td>
 
 
@@ -103,7 +111,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input type="text" class="form-control" name="Email" id="Email" placeholder="Email" />
+                                    <input type="text" class="form-control" name="email" id="Email" placeholder="Email" />
                                 </div>
                             </div>
                         </div>
@@ -114,6 +122,25 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
                                     <input type="text" class="form-control" name="department" id="department" placeholder="department" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Team</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+
+                                    <select name="team" id="">
+
+                                        <option value="" disabled selected  >Select a team for this employee</option>
+                                    @foreach($teams as $data)
+                                            <option value="{{$data->id}}">{{$data->name}}</option>
+
+                                        @endforeach
+
+                                    </select>
+
                                 </div>
                             </div>
                         </div>

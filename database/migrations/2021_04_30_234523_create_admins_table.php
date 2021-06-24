@@ -18,6 +18,7 @@ class CreateAdminsTable extends Migration
             $table->string('email');
             $table->id();
             $table->string('password');
+            $table->foreignId('team_id')->nullable()->constrained('projectteams')->restrictOnDelete();
             $table->string('designation')->nullable();
             $table->string('Department')->nullable();
             $table->text('image');

@@ -10,4 +10,10 @@ class Project extends Model
 
     use HasFactory;
     protected $guarded=[];
+
+    public function projectTeam()
+    {
+        return $this->belongsTo(Projectteam::class,'team_id','id');
+    }
+
 }

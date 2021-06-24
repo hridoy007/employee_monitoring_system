@@ -75,7 +75,7 @@
 {{--                </div>--}}
 {{--                <div class="modal-body">--}}
                     {{--form start--}}
-
+                <div class="container-fluid">
                     <form enctype="multipart/form-data" method="post" action="{{route('employee.update',$employee->id)}}">
                         @csrf
                         @method('PUT')
@@ -120,11 +120,31 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Team</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+
+                                    <select name="team" id="">
+
+                                        <option value="" disabled selected  >Select a team for this employee</option>
+                                        @foreach($teams as $data)
+                                            <option @if($employee->team_id == $data->id) selected @endif value="{{$data->id}}">{{$data->name}}</option>
+
+                                        @endforeach
+
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
                             <label for="username" class="cols-sm-2 control-label">Password</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input value="{{$employee->password}}" type="text" class="form-control" name="password" id="password" placeholder="Enter Your Password" />
+                                    <input value="{{$employee->password}}" type="password" class="form-control" name="password" id="password" placeholder="Enter Your Password" />
                                 </div>
                             </div>
                         </div>
@@ -149,16 +169,7 @@
                     </form>
                 </div>
 
-            </div>
-        </div>
-    </div>
-    </div>
 
 
-    </div>
-
-    </div>
-    </div>
-    </div>
 
 @endsection

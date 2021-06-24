@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Admin;
 use App\Models\Backend\Employee;
 use App\Models\Backend\Project;
 use App\Models\Backend\Projectteam;
 use Illuminate\Http\Request;
+use Throwable;
 
 class ProjectteamController extends Controller
 
@@ -34,9 +36,21 @@ class ProjectteamController extends Controller
     public function projectteamDelete ($id)
     {
         $projectteam=Projectteam::find($id);
-        $projectteam->delete();
-        return redirect()->route('projectteam')->with('success','Project team Removed Successfully');
-    }
+
+        try {
+            $projectteam->delete();
+            return redirect()->route('projectteam')->with('success','Project team Removed Successfully');
+
+        }catch (Throwable $e){
+
+            if ($e->getCode() == '23000'){
+
+                return redirect()->back()->with('danger','This team has employees in it you cannot delete it');
+            }
+
+        }
+
+           }
 
     public function projectteamEdit($id)
     {
@@ -56,5 +70,10 @@ class ProjectteamController extends Controller
         return redirect()->route('projectteam')->with('success','Project Team Updated Successfully');
     }
 
+    public function projectEmployeeView($id)
+    {
+        $employee=Admin::where('team_id',$id)->get();
+        return view('backend.layouts.projectteam.viewEmployees',compact('employee'));
+    }
 
 }

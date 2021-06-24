@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('project_name');
             $table->string('dept_name');
+            $table->foreignId('team_id');
             $table->string('status')->default('upcoming');
             $table->date('deadline')->nullable();
             $table->string('project_code');

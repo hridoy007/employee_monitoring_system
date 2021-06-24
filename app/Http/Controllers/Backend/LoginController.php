@@ -10,12 +10,19 @@ class LoginController extends Controller
 {
     public function login()
     {
-        $admin=Admin::all();
+        $admin=Admin::where('role','admin')->get();
         return view('backend.layouts.admin.admin',compact('admin'));
     }
     public function loginCreate(Request $request)
 
     {
+
+        $request->validate([
+
+            'email'=>'required|email|unique:admins'
+
+        ]);
+
         $user_file = "";
 
         if ($request->hasFile('admin_image')) {

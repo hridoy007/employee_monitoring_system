@@ -75,6 +75,11 @@
 
             </li>
 
+                <li><a class="has-arrow" href="{{route('projectteam')}}" aria-expanded="false"><i
+                            class="icon icon-plug"></i><span style="color: white" class="nav-text">Project Team</span></a>
+
+                </li>
+
             <li><a class="has-arrow" href="{{route('attendance.record')}}" aria-expanded="false"><i
                         class="icon icon-single-04"></i><span style="color: white" class="nav-text">Attendance Record</span></a>
 

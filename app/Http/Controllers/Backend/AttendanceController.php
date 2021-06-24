@@ -54,7 +54,7 @@ class AttendanceController extends Controller
         {
             $attendance->update([
 
-                'check_out'=>date("h:i:sa"),
+                'check_out'=>date("h:i:s"),
             ]);
             return redirect()->route('attendance')->with('success','Checked Out Successfully');
         }

@@ -3,9 +3,11 @@
 
 
     <!-- Button trigger modal -->
+    @if(auth()->user()->role=='admin')
     <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Project Details
         </button></center>
+    @endif
 
     @if(session()->has('success'))
 
@@ -20,12 +22,15 @@
         <th scope="col">ID</th>
         <th scope="col">Project Name</th>
         <th scope="col">Department</th>
+        <th scope="col">Team</th>
         <th scope="col">Deadline</th>
         <th scope="col">Project Status</th>
 
         {{--        <th scope="col">Employee Photo</th>--}}
-        <th scope="col">Actions</th>
+        @if(auth()->user()->role=='admin')
 
+            <th scope="col">Actions</th>
+        @endif
 
 
         </thead>
@@ -38,6 +43,7 @@
 
                 <td>{{$data->project_name}}</td>
                 <td>{{$data->dept_name}}</td>
+                <td>{{$data->projectTeam->name}}</td>
                 <td>{{$data->deadline}}</td>
                 <td>{{$data->status}}</td>
 
@@ -45,9 +51,9 @@
 
 
                 <td>
-                    <a class="btn btn-success" href="">View</a>
                     @if(auth()->user()->role=='admin')
-                    <a class="btn btn-danger" href="{{route('project.delete',$data->id)}}">Delete</a>
+                        <a class="btn btn-success" href="">View</a>
+                        <a class="btn btn-danger" href="{{route('project.delete',$data->id)}}">Delete</a>
                     <a class="btn btn-info" href="{{route('project.edit',$data->id)}}">Edit</a>
                     @endif
                 </td>
@@ -92,6 +98,26 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Team</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+
+                                    <select required name="team" id="">
+
+                                        <option value="" disabled selected  >Select a team for this Project</option>
+                                        @foreach($projectTeam as $data)
+                                            <option value="{{$data->id}}">{{$data->name}}</option>
+
+                                        @endforeach
+
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+
 
                         <div class="form-group">
                             <label for="email" class="cols-sm-2 control-label">Project Status</label>

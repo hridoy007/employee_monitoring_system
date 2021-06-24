@@ -3,9 +3,11 @@
 
 
     <!-- Button trigger modal -->
+    @if(auth()->user()->role=='admin')
     <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Leave Info
         </button></center>
+    @endif
 
     @if(session()->has('success'))
 

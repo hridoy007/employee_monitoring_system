@@ -6,6 +6,11 @@
    <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         Admin create
     </button></center>
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <div class="alert alert-danger">{{$error}}</div>
+        @endforeach
+    @endif
 
     @if(session()->has('success'))
 

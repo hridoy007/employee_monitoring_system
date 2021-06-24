@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 
 use App\Models\Backend\Project;
+use App\Models\Backend\Projectteam;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -12,8 +13,9 @@ class ProjectController extends Controller
 {
     public function project()
     {
-        $project=Project::paginate('2');
-        return view ('backend.layouts.project.project',compact('project'));
+        $projectTeam=Projectteam::all();
+        $project=Project::with('projectTeam')->paginate('2');
+        return view ('backend.layouts.project.project',compact('project','projectTeam'));
     }
     public function projectDetails(Request $request)
     {
@@ -21,6 +23,7 @@ class ProjectController extends Controller
 
             'project_name'=>$request->projectName,
             'dept_name'=>$request->deptName,
+            'team_id'=>$request->team,
             'deadline'=>$request->date,
             'project_code'=>$request->projectCode,
             'status'=>$request->projectStatus

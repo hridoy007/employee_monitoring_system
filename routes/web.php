@@ -86,6 +86,9 @@ Route::group(['middleware'=>'auth'],function () {
     Route::get('/attendance/Info/update/{id}', [AttendanceController::class, 'attendanceInfoUpdate'])->name('attendance.update.create');
     Route::get('/attendance/delete/{id}', [AttendanceController::class, 'attendanceDelete'])->name('attendance.delete');
 
+//Project Team Employees
+    Route::get('/project/team/employees/{id}',[ProjectteamController::class,'projectEmployeeView'])->name('project.employee.view');
+
 //leave
     Route::get('Leave', [LeaveController::class, 'leave'])->name('leave.view');
     Route::post('/leave/info', [LeaveController::class, 'leaveInfo'])->name('leave.create');

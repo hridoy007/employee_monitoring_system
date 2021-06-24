@@ -3,14 +3,23 @@
 
 
     <!-- Button trigger modal -->
-    <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    @if(auth()->user()->role=='admin')
+        <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Project Management
         </button></center>
+    @endif
 
     @if(session()->has('success'))
 
         <div class="alert alert-success">
             {{ session()->get('success') }}
+        </div>
+    @endif
+
+    @if(session()->has('danger'))
+
+        <div class="alert alert-danger">
+            {{ session()->get('danger') }}
         </div>
     @endif
 
@@ -39,10 +48,11 @@
 
 
                 <td>
-                    <a class="btn btn-success" href="">View</a>
+                    <a class="btn btn-success" href="{{route('project.employee.view',$data->id)}}">View Employees</a>
+                    @if(auth()->user()->role=='admin')
                     <a class="btn btn-danger" href="{{route('projectteam.delete',$data->id)}}">Delete</a>
                     <a class="btn btn-info" href="{{route('projectteam.edit',$data->id)}}">Edit</a>
-
+                    @endif
                 </td>
 
             </tr>
